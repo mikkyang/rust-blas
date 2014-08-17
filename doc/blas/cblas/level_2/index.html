@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `level_2` mod in crate `blas`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, level_2">
+
+    <title>blas::cblas::level_2 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>blas</a>&#8203;::<a href='../index.html'>cblas</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../level_1/index.html'>level_1</a><a class='mod current' href='../level_2/index.html'>level_2</a><a class='mod ' href='../level_3/index.html'>level_3</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><div class='in-band'>Module <a href='../../index.html'>blas</a>&#8203;::<a href='../index.html'>cblas</a>&#8203;::<a class='mod' href=''>level_2</a>&#8203;<a class='stability Stable' title=''>Stable</a></div><div class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-1067' href='../../../src/blas/Users/mikkyang/Code/blas/src/cblas/level_2.rs.html#5-120'>[src]</a></div></h1>
+<div class='docblock'><p>Matrix-Vector Operations</p>
+</div><h2 id='ffi-fns' class='section-header'><a href="#ffi-fns">Foreign Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_cgbmv.html'
+                               title='blas::cblas::level_2::cblas_cgbmv'>cblas_cgbmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_cgemv.html'
+                               title='blas::cblas::level_2::cblas_cgemv'>cblas_cgemv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_cgerc.html'
+                               title='blas::cblas::level_2::cblas_cgerc'>cblas_cgerc</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_cgeru.html'
+                               title='blas::cblas::level_2::cblas_cgeru'>cblas_cgeru</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_chbmv.html'
+                               title='blas::cblas::level_2::cblas_chbmv'>cblas_chbmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_chemv.html'
+                               title='blas::cblas::level_2::cblas_chemv'>cblas_chemv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_cher.html'
+                               title='blas::cblas::level_2::cblas_cher'>cblas_cher</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_cher2.html'
+                               title='blas::cblas::level_2::cblas_cher2'>cblas_cher2</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_chpmv.html'
+                               title='blas::cblas::level_2::cblas_chpmv'>cblas_chpmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_chpr.html'
+                               title='blas::cblas::level_2::cblas_chpr'>cblas_chpr</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_chpr2.html'
+                               title='blas::cblas::level_2::cblas_chpr2'>cblas_chpr2</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_csymv.html'
+                               title='blas::cblas::level_2::cblas_csymv'>cblas_csymv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ctbmv.html'
+                               title='blas::cblas::level_2::cblas_ctbmv'>cblas_ctbmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ctbsv.html'
+                               title='blas::cblas::level_2::cblas_ctbsv'>cblas_ctbsv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ctpmv.html'
+                               title='blas::cblas::level_2::cblas_ctpmv'>cblas_ctpmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ctpsv.html'
+                               title='blas::cblas::level_2::cblas_ctpsv'>cblas_ctpsv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ctrmv.html'
+                               title='blas::cblas::level_2::cblas_ctrmv'>cblas_ctrmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ctrsv.html'
+                               title='blas::cblas::level_2::cblas_ctrsv'>cblas_ctrsv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dgbmv.html'
+                               title='blas::cblas::level_2::cblas_dgbmv'>cblas_dgbmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dgemv.html'
+                               title='blas::cblas::level_2::cblas_dgemv'>cblas_dgemv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dger.html'
+                               title='blas::cblas::level_2::cblas_dger'>cblas_dger</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dsbmv.html'
+                               title='blas::cblas::level_2::cblas_dsbmv'>cblas_dsbmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dspmv.html'
+                               title='blas::cblas::level_2::cblas_dspmv'>cblas_dspmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dspr.html'
+                               title='blas::cblas::level_2::cblas_dspr'>cblas_dspr</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dspr2.html'
+                               title='blas::cblas::level_2::cblas_dspr2'>cblas_dspr2</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dsymv.html'
+                               title='blas::cblas::level_2::cblas_dsymv'>cblas_dsymv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dsyr.html'
+                               title='blas::cblas::level_2::cblas_dsyr'>cblas_dsyr</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dsyr2.html'
+                               title='blas::cblas::level_2::cblas_dsyr2'>cblas_dsyr2</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dtbmv.html'
+                               title='blas::cblas::level_2::cblas_dtbmv'>cblas_dtbmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dtbsv.html'
+                               title='blas::cblas::level_2::cblas_dtbsv'>cblas_dtbsv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dtpmv.html'
+                               title='blas::cblas::level_2::cblas_dtpmv'>cblas_dtpmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dtpsv.html'
+                               title='blas::cblas::level_2::cblas_dtpsv'>cblas_dtpsv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dtrmv.html'
+                               title='blas::cblas::level_2::cblas_dtrmv'>cblas_dtrmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_dtrsv.html'
+                               title='blas::cblas::level_2::cblas_dtrsv'>cblas_dtrsv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_sgbmv.html'
+                               title='blas::cblas::level_2::cblas_sgbmv'>cblas_sgbmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_sgemv.html'
+                               title='blas::cblas::level_2::cblas_sgemv'>cblas_sgemv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_sger.html'
+                               title='blas::cblas::level_2::cblas_sger'>cblas_sger</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ssbmv.html'
+                               title='blas::cblas::level_2::cblas_ssbmv'>cblas_ssbmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_sspmv.html'
+                               title='blas::cblas::level_2::cblas_sspmv'>cblas_sspmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_sspr.html'
+                               title='blas::cblas::level_2::cblas_sspr'>cblas_sspr</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_sspr2.html'
+                               title='blas::cblas::level_2::cblas_sspr2'>cblas_sspr2</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ssymv.html'
+                               title='blas::cblas::level_2::cblas_ssymv'>cblas_ssymv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ssyr.html'
+                               title='blas::cblas::level_2::cblas_ssyr'>cblas_ssyr</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ssyr2.html'
+                               title='blas::cblas::level_2::cblas_ssyr2'>cblas_ssyr2</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_stbmv.html'
+                               title='blas::cblas::level_2::cblas_stbmv'>cblas_stbmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_stbsv.html'
+                               title='blas::cblas::level_2::cblas_stbsv'>cblas_stbsv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_stpmv.html'
+                               title='blas::cblas::level_2::cblas_stpmv'>cblas_stpmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_stpsv.html'
+                               title='blas::cblas::level_2::cblas_stpsv'>cblas_stpsv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_strmv.html'
+                               title='blas::cblas::level_2::cblas_strmv'>cblas_strmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_strsv.html'
+                               title='blas::cblas::level_2::cblas_strsv'>cblas_strsv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_zgbmv.html'
+                               title='blas::cblas::level_2::cblas_zgbmv'>cblas_zgbmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_zgemv.html'
+                               title='blas::cblas::level_2::cblas_zgemv'>cblas_zgemv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_zgerc.html'
+                               title='blas::cblas::level_2::cblas_zgerc'>cblas_zgerc</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_zgeru.html'
+                               title='blas::cblas::level_2::cblas_zgeru'>cblas_zgeru</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_zhbmv.html'
+                               title='blas::cblas::level_2::cblas_zhbmv'>cblas_zhbmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_zhemv.html'
+                               title='blas::cblas::level_2::cblas_zhemv'>cblas_zhemv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_zher.html'
+                               title='blas::cblas::level_2::cblas_zher'>cblas_zher</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_zher2.html'
+                               title='blas::cblas::level_2::cblas_zher2'>cblas_zher2</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_zhpmv.html'
+                               title='blas::cblas::level_2::cblas_zhpmv'>cblas_zhpmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_zhpr.html'
+                               title='blas::cblas::level_2::cblas_zhpr'>cblas_zhpr</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_zhpr2.html'
+                               title='blas::cblas::level_2::cblas_zhpr2'>cblas_zhpr2</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_zsymv.html'
+                               title='blas::cblas::level_2::cblas_zsymv'>cblas_zsymv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ztbmv.html'
+                               title='blas::cblas::level_2::cblas_ztbmv'>cblas_ztbmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ztbsv.html'
+                               title='blas::cblas::level_2::cblas_ztbsv'>cblas_ztbsv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ztpmv.html'
+                               title='blas::cblas::level_2::cblas_ztpmv'>cblas_ztpmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ztpsv.html'
+                               title='blas::cblas::level_2::cblas_ztpsv'>cblas_ztpsv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ztrmv.html'
+                               title='blas::cblas::level_2::cblas_ztrmv'>cblas_ztrmv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='ffi' href='ffi.cblas_ztrsv.html'
+                               title='blas::cblas::level_2::cblas_ztrsv'>cblas_ztrsv</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "blas";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    
+    <script async src="../../../search-index.js"></script>
+</body>
+</html>
