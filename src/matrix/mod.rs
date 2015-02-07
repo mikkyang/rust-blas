@@ -26,6 +26,50 @@ pub trait BandMatrix<T>: Matrix<T> {
     fn sup_diagonals(&self) -> i32;
 }
 
+pub struct Mat<T> {
+    data: Vec<T>,
+    rows: usize,
+    cols: usize
+}
+
+impl<T> Mat<T> {
+    fn new(n: usize, m: usize) -> Mat<T> {
+        let mut data = Vec::<T>::with_capacity(n*m);
+        unsafe{ data.set_len(n*m); }
+        Mat::<T> { data: data, rows: n, cols: m }
+    }
+}
+
+use std::ops::Index;
+use std::ops::IndexMut;
+
+impl<T> Index<usize> for Mat<T> {
+    type Output = [T];
+
+    fn index(&self, idx: &usize) -> &[T] {
+        let beg = *idx * self.rows;
+        let end = beg+self.cols;
+        &self.data[beg..end]
+    }
+}
+
+impl<T> IndexMut<usize> for Mat<T> {
+    type Output = [T];
+
+    fn index_mut(&mut self, idx: &usize) -> &mut [T] {
+        let beg = *idx * self.rows;
+        let end = beg+self.cols;
+        &mut self.data[beg..end]
+    }
+}
+
+impl<T> Matrix<T> for Mat<T> {
+    fn rows(&self) -> i32 { self.rows as i32 }
+    fn cols(&self) -> i32 { self.cols as i32 }
+    fn as_ptr(&self) -> *const T { self.data.as_ptr() }
+    fn as_mut_ptr(&mut self) -> *mut T { self.data.as_mut_ptr() }
+}
+
 #[cfg(test)]
 mod test_struct {
     use matrix::Matrix;
