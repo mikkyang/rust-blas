@@ -34,18 +34,18 @@ pub struct Mat<T> {
 }
 
 impl<T> Mat<T> {
-    fn new(m: usize, n: usize) -> Mat<T> {
+    pub fn new(m: usize, n: usize) -> Mat<T> {
         let len = m*n;
         let mut data = Vec::<T>::with_capacity(len);
         unsafe{ data.set_len(len); }
         Mat::<T> { data: data, rows: m, cols: n }
     }
 
-    fn as_slice(&self) -> &[T] {
+    pub fn as_slice(&self) -> &[T] {
         self.data.as_slice()
     }
 
-    fn as_mut_slice(&mut self) -> &mut [T] {
+    pub fn as_mut_slice(&mut self) -> &mut [T] {
         self.data.as_mut_slice()
     }
 }
