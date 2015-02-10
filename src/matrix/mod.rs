@@ -26,6 +26,7 @@ pub trait BandMatrix<T>: Matrix<T> {
     fn sup_diagonals(&self) -> i32;
 }
 
+#[derive(Clone, PartialEq)]
 pub struct Mat<T> {
     data: Vec<T>,
     rows: usize,
