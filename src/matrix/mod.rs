@@ -39,6 +39,14 @@ impl<T> Mat<T> {
         unsafe{ data.set_len(n*m); }
         Mat::<T> { data: data, rows: n, cols: m }
     }
+
+    fn as_slice(&self) -> &[T] {
+        self.data.as_slice()
+    }
+
+    fn as_mut_slice(&mut self) -> &mut [T] {
+        self.data.as_mut_slice()
+    }
 }
 
 use std::ops::Index;
