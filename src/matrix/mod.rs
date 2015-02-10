@@ -55,7 +55,6 @@ impl<T> Index<usize> for Mat<T> {
 }
 
 impl<T> IndexMut<usize> for Mat<T> {
-    type Output = [T];
 
     fn index_mut(&mut self, idx: &usize) -> &mut [T] {
         let beg = *idx * self.rows;
