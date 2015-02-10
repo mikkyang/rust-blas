@@ -12,6 +12,7 @@ pub use matrix::Matrix;
 pub use vector::ops::*;
 pub use matrix_vector::ops::*;
 pub use matrix::ops::*;
+pub use matrix::Mat;
 
 #[macro_use]
 mod prefix;
