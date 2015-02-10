@@ -49,8 +49,7 @@ impl<T> Mat<T> {
     }
 }
 
-use std::ops::Index;
-use std::ops::IndexMut;
+use std::ops::{Index, IndexMut};
 
 impl<T> Index<usize> for Mat<T> {
     type Output = [T];
@@ -99,6 +98,32 @@ mod test_struct {
         #[inline]
         fn as_mut_ptr(&mut self) -> *mut T {
             self.2.as_mut_slice().as_mut_ptr()
+        }
+    }
+}
+
+#[test]
+fn mat_test() {
+    let mut A = Mat::<f64>::new(3,3);
+    //fill matrix
+    for i in range(0,3) {
+        for j in range(0,3) {
+            A[i][j] = ((i*3+j) as f64)
+        }
+
+    }
+    //test clone and eq
+    let B = A.clone();
+    assert!(A == B);
+    A[0][0] = 10f64;
+    assert!(A != B);
+    //check if indexing worked and row of A is as expected
+    let row0 = vec![10f64, 1f64, 2f64];
+    assert_eq!(row0.as_slice(), &A[0]);
+    //check B did not change
+    for i in range(0,3) {
+        for j in range(0,3) {
+            assert_eq!(B[i][j], ((i*3+j) as f64));
         }
     }
 }
