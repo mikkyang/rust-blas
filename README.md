@@ -15,7 +15,9 @@ For example the functions `cblas_saxpy`, `cblas_daxpy`, `cblas_caxypy`, and
 Additionally, RBLAS introduces a few traits to shorten calls to these BLAS
 functions: `Vector` for types that implement vector-like characteristics and
 `Matrix` for types that implement matrix-like characteristics. The `Vector`
-trait is already implemented by `Vec` and `[]` types.
+trait is already implemented by `Vec` and `[]` types. The `Matrix` trait
+is implemented by a simple wrapper around `Vec` that allows creating
+a sized matrix and use 2-dimensional indexing.
 
 [Documentation](http://mikkyang.github.io/rust-blas/doc/rblas/index.html)
 

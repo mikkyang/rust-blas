@@ -92,7 +92,7 @@ impl<'a, T> Vector<T> for &'a [T] {
 
     #[inline]
     fn len(&self) -> i32 {
-        let l: Option<i32> = NumCast::from(self.len());
+        let l: Option<i32> = NumCast::from((*self).len());
         match l {
             Some(l) => l,
             None => panic!(),
