@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["attribute",""],["matrix",""],["matrix_vector",""],["vector",""]]});
+initSidebarItems({"mod":[["attribute","Various attributes of vectors and matrices."],["matrix","Matrix operations."],["matrix_vector","Matrix-vector operations."],["vector","Vector operations."]]});
