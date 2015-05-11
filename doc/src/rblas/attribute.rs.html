@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="Source to the Rust file `/Users/mikkyang/Code/rust-blas/src/attribute.rs`.">
+    <meta name="description" content="Source to the Rust file `src/attribute.rs`.">
     <meta name="keywords" content="rust, rustlang, rust-lang">
 
     <title>attribute.rs.html -- source</title>
@@ -79,52 +79,42 @@
 <span id="37">37</span>
 <span id="38">38</span>
 <span id="39">39</span>
-<span id="40">40</span>
-<span id="41">41</span>
-<span id="42">42</span>
-<span id="43">43</span>
-<span id="44">44</span>
 </pre><pre class='rust '>
 <span class='comment'>// Copyright 2014 Michael Yang. All rights reserved.</span>
 <span class='comment'>// Use of this source code is governed by a MIT-style</span>
 <span class='comment'>// license that can be found in the LICENSE file.</span>
 
-<span class='attribute'>#[<span class='ident'>stable</span>]</span>
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
-<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Copy</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Copy</span>, <span class='ident'>Clone</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>Order</span> {
     <span class='ident'>RowMajor</span><span class='op'>=</span><span class='number'>101</span>,
     <span class='ident'>ColMajor</span><span class='op'>=</span><span class='number'>102</span>,
 }
 
-<span class='attribute'>#[<span class='ident'>stable</span>]</span>
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
-<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Copy</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Copy</span>, <span class='ident'>Clone</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>Transpose</span> {
     <span class='ident'>NoTrans</span><span class='op'>=</span><span class='number'>111</span>,
     <span class='ident'>Trans</span><span class='op'>=</span><span class='number'>112</span>,
     <span class='ident'>ConjTrans</span><span class='op'>=</span><span class='number'>113</span>,
 }
 
-<span class='attribute'>#[<span class='ident'>stable</span>]</span>
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
-<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Copy</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Copy</span>, <span class='ident'>Clone</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>Symmetry</span> {
     <span class='ident'>Upper</span><span class='op'>=</span><span class='number'>121</span>,
     <span class='ident'>Lower</span><span class='op'>=</span><span class='number'>122</span>,
 }
 
-<span class='attribute'>#[<span class='ident'>stable</span>]</span>
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
-<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Copy</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Copy</span>, <span class='ident'>Clone</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>Diagonal</span> {
     <span class='ident'>NonUnit</span><span class='op'>=</span><span class='number'>131</span>,
     <span class='ident'>Unit</span><span class='op'>=</span><span class='number'>132</span>,
 }
 
-<span class='attribute'>#[<span class='ident'>stable</span>]</span>
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
-<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Copy</span>)]</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Copy</span>, <span class='ident'>Clone</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>Side</span> {
     <span class='ident'>Left</span><span class='op'>=</span><span class='number'>141</span>,
     <span class='ident'>Right</span><span class='op'>=</span><span class='number'>142</span>,

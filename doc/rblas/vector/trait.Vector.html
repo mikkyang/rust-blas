@@ -26,7 +26,7 @@
 
     <section class="sidebar">
         
-        <p class='location'><a href='../index.html'>rblas</a>::<wbr><a href='index.html'>vector</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='ll/index.html'>ll</a><a class='mod ' href='ops/index.html'>ops</a></div><div class='block trait'><h2>Traits</h2><a class='trait current' href='trait.Vector.html'>Vector</a><a class='trait ' href='trait.VectorOperations.html'>VectorOperations</a></div>
+        <p class='location'><a href='../index.html'>rblas</a>::<wbr><a href='index.html'>vector</a></p><script>window.sidebarCurrent = {name: 'Vector', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
     </section>
 
     <nav class="sub">
@@ -41,23 +41,23 @@
     </nav>
 
     <section id='main' class="content trait">
-<h1 class='fqn'><span class='in-band'>Trait <a href='../index.html'>rblas</a>::<wbr><a href='index.html'>vector</a>::<wbr><a class='trait' href=''>Vector</a><wbr><a class='stability Unstable' title=''>Unstable</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="collapse-all" href="#">[-]
-            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
-        </span><a id='src-3570' href='../../src/rblas/vector/mod.rs.html#14-19'>[src]</a></span></h1>
+<h1 class='fqn'><span class='in-band'>Trait <a href='../index.html'>rblas</a>::<wbr><a href='index.html'>vector</a>::<wbr><a class='trait' href=''>Vector</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="#" title="collapse all docs">[&minus;]</a>
+        </span><a id='src-3079' class='srclink' href='../../src/rblas/vector/mod.rs.html#14-19' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait Vector&lt;T&gt; {
     fn <a href='#tymethod.inc' class='fnname'>inc</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>;
     fn <a href='#tymethod.len' class='fnname'>len</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>;
-    fn <a href='#tymethod.as_ptr' class='fnname'>as_ptr</a>(&amp;self) -&gt; *const T;
-    fn <a href='#tymethod.as_mut_ptr' class='fnname'>as_mut_ptr</a>(&amp;mut self) -&gt; *mut T;
+    fn <a href='#tymethod.as_ptr' class='fnname'>as_ptr</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const T</a>;
+    fn <a href='#tymethod.as_mut_ptr' class='fnname'>as_mut_ptr</a>(&amp;mut self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut T</a>;
 }</pre>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
-        <h3 id='tymethod.inc' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#tymethod.inc' class='fnname'>inc</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h3><h3 id='tymethod.len' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#tymethod.len' class='fnname'>len</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h3><h3 id='tymethod.as_ptr' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#tymethod.as_ptr' class='fnname'>as_ptr</a>(&amp;self) -&gt; *const T</code></h3><h3 id='tymethod.as_mut_ptr' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#tymethod.as_mut_ptr' class='fnname'>as_mut_ptr</a>(&amp;mut self) -&gt; *mut T</code></h3></div>
+        <h3 id='tymethod.inc' class='method stab '><code>fn <a href='#tymethod.inc' class='fnname'>inc</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h3><h3 id='tymethod.len' class='method stab '><code>fn <a href='#tymethod.len' class='fnname'>len</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></h3><h3 id='tymethod.as_ptr' class='method stab '><code>fn <a href='#tymethod.as_ptr' class='fnname'>as_ptr</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const T</a></code></h3><h3 id='tymethod.as_mut_ptr' class='method stab '><code>fn <a href='#tymethod.as_mut_ptr' class='fnname'>as_mut_ptr</a>(&amp;mut self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut T</a></code></h3></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl&lt;'a, T&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;T&gt;&gt; for &amp;'a <a class='trait' href='../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;T&gt; <span class='where'>where T: <a class='trait' href='../../rblas/vector/ops/trait.Copy.html' title='rblas::vector::ops::Copy'>Copy</a></span></code></h3><div class='impl-items'><h4 id='method.into' class='method'><code>fn <a href='http://doc.rust-lang.org/nightly/core/convert/trait.Into.html#method.into' class='fnname'>into</a>(self) -&gt; <a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;T&gt;</code></h4>
+</div>
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
-    <li><a class='stability Unstable' title='Unstable'></a><code>impl&lt;T&gt; <a class='trait' href='../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;T&gt; for <a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;T&gt;</code></li>
-<li><a class='stability Unstable' title='Unstable'></a><code>impl&lt;'a, T&gt; <a class='trait' href='../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;T&gt; for <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;'a [T]</a></code></li>
+    <li><code>impl&lt;T&gt; <a class='trait' href='../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;T&gt; for <a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;T&gt;</code></li>
+<li><code>impl&lt;'a, T&gt; <a class='trait' href='../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;T&gt; for <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;'a [T]</a></code></li>
 </ul><script type="text/javascript" async
                               src="../../implementors/rblas/vector/trait.Vector.js">
                       </script></section>

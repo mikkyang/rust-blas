@@ -26,7 +26,7 @@
 
     <section class="sidebar">
         
-        <p class='location'><a href='../../index.html'>rblas</a>::<wbr><a href='../index.html'>matrix</a>::<wbr><a href='index.html'>ops</a></p><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.Gemm.html'>Gemm</a><a class='trait current' href='trait.Hemm.html'>Hemm</a><a class='trait ' href='trait.Her2k.html'>Her2k</a><a class='trait ' href='trait.Herk.html'>Herk</a><a class='trait ' href='trait.Symm.html'>Symm</a><a class='trait ' href='trait.Syr2k.html'>Syr2k</a><a class='trait ' href='trait.Syrk.html'>Syrk</a><a class='trait ' href='trait.Trmm.html'>Trmm</a><a class='trait ' href='trait.Trsm.html'>Trsm</a></div>
+        <p class='location'><a href='../../index.html'>rblas</a>::<wbr><a href='../index.html'>matrix</a>::<wbr><a href='index.html'>ops</a></p><script>window.sidebarCurrent = {name: 'Hemm', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
     </section>
 
     <nav class="sub">
@@ -41,20 +41,19 @@
     </nav>
 
     <section id='main' class="content trait">
-<h1 class='fqn'><span class='in-band'>Trait <a href='../../index.html'>rblas</a>::<wbr><a href='../index.html'>matrix</a>::<wbr><a href='index.html'>ops</a>::<wbr><a class='trait' href=''>Hemm</a><wbr><a class='stability Unstable' title=''>Unstable</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="collapse-all" href="#">[-]
-            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
-        </span><a id='src-13765' href='../../../src/rblas/matrix/ops.rs.html#59-61'>[src]</a></span></h1>
+<h1 class='fqn'><span class='in-band'>Trait <a href='../../index.html'>rblas</a>::<wbr><a href='../index.html'>matrix</a>::<wbr><a href='index.html'>ops</a>::<wbr><a class='trait' href=''>Hemm</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="#" title="collapse all docs">[&minus;]</a>
+        </span><a id='src-11283' class='srclink' href='../../../src/rblas/matrix/ops.rs.html#59-61' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait Hemm {
     fn <a href='#tymethod.hemm' class='fnname'>hemm</a>(side: <a class='enum' href='../../../rblas/attribute/enum.Side.html' title='rblas::attribute::Side'>Side</a>, symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, alpha: &amp;Self, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, b: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, beta: &amp;Self, c: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;);
 }</pre>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
-        <h3 id='tymethod.hemm' class='method'><a class='stability Unstable' title='Unstable'></a><code>fn <a href='#tymethod.hemm' class='fnname'>hemm</a>(side: <a class='enum' href='../../../rblas/attribute/enum.Side.html' title='rblas::attribute::Side'>Side</a>, symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, alpha: &amp;Self, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, b: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, beta: &amp;Self, c: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;)</code></h3></div>
+        <h3 id='tymethod.hemm' class='method stab '><code>fn <a href='#tymethod.hemm' class='fnname'>hemm</a>(side: <a class='enum' href='../../../rblas/attribute/enum.Side.html' title='rblas::attribute::Side'>Side</a>, symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, alpha: &amp;Self, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, b: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, beta: &amp;Self, c: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;)</code></h3></div>
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
-    <li><a class='stability Unstable' title='Unstable'></a><code>impl <a class='trait' href='../../../rblas/matrix/ops/trait.Hemm.html' title='rblas::matrix::ops::Hemm'>Hemm</a> for <a class='type' href='../../../num/complex/type.Complex32.html' title='num::complex::Complex32'>Complex32</a></code></li>
-<li><a class='stability Unstable' title='Unstable'></a><code>impl <a class='trait' href='../../../rblas/matrix/ops/trait.Hemm.html' title='rblas::matrix::ops::Hemm'>Hemm</a> for <a class='type' href='../../../num/complex/type.Complex64.html' title='num::complex::Complex64'>Complex64</a></code></li>
+    <li><code>impl <a class='trait' href='../../../rblas/matrix/ops/trait.Hemm.html' title='rblas::matrix::ops::Hemm'>Hemm</a> for <a class='type' href='http://doc.rust-lang.org/num/num/complex/type.Complex32.html' title='num::complex::Complex32'>Complex32</a></code></li>
+<li><code>impl <a class='trait' href='../../../rblas/matrix/ops/trait.Hemm.html' title='rblas::matrix::ops::Hemm'>Hemm</a> for <a class='type' href='http://doc.rust-lang.org/num/num/complex/type.Complex64.html' title='num::complex::Complex64'>Complex64</a></code></li>
 </ul><script type="text/javascript" async
                               src="../../../implementors/rblas/matrix/ops/trait.Hemm.js">
                       </script></section>

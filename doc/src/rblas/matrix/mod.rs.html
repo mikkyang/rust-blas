@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="Source to the Rust file `/Users/mikkyang/Code/rust-blas/src/matrix/mod.rs`.">
+    <meta name="description" content="Source to the Rust file `src/matrix/mod.rs`.">
     <meta name="keywords" content="rust, rustlang, rust-lang">
 
     <title>mod.rs.html -- source</title>
@@ -91,7 +91,6 @@
 <span id="49">49</span>
 <span id="50">50</span>
 <span id="51">51</span>
-<span id="52">52</span>
 </pre><pre class='rust '>
 <span class='comment'>// Copyright 2014 Michael Yang. All rights reserved.</span>
 <span class='comment'>// Use of this source code is governed by a MIT-style</span>
@@ -102,7 +101,6 @@
     <span class='ident'>Transpose</span>,
 };
 
-<span class='attribute'>#[<span class='ident'>stable</span>]</span>
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>ll</span>;
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>ops</span>;
 
@@ -136,12 +134,12 @@
 
         <span class='attribute'>#[<span class='ident'>inline</span>]</span>
         <span class='kw'>fn</span> <span class='ident'>as_ptr</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>T</span> {
-            <span class='self'>self</span>.<span class='number'>2</span>.<span class='ident'>as_slice</span>().<span class='ident'>as_ptr</span>()
+            <span class='self'>self</span>.<span class='number'>2</span>[..].<span class='ident'>as_ptr</span>()
         }
 
         <span class='attribute'>#[<span class='ident'>inline</span>]</span>
         <span class='kw'>fn</span> <span class='ident'>as_mut_ptr</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>T</span> {
-            <span class='self'>self</span>.<span class='number'>2</span>.<span class='ident'>as_mut_slice</span>().<span class='ident'>as_mut_ptr</span>()
+            (<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>.<span class='number'>2</span>[..]).<span class='ident'>as_mut_ptr</span>()
         }
     }
 }

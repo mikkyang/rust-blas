@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="Source to the Rust file `/Users/mikkyang/Code/rust-blas/src/default.rs`.">
+    <meta name="description" content="Source to the Rust file `src/default.rs`.">
     <meta name="keywords" content="rust, rustlang, rust-lang">
 
     <title>default.rs.html -- source</title>
@@ -79,8 +79,8 @@
 <span class='kw'>use</span> <span class='ident'>num</span>::<span class='ident'>complex</span>::<span class='ident'>Complex</span>;
 
 <span class='kw'>pub</span> <span class='kw'>trait</span> <span class='ident'>Default</span> {
-    <span class='kw'>fn</span> <span class='ident'>one</span>() <span class='op'>-&gt;</span> <span class='ident'>Self</span>;
-    <span class='kw'>fn</span> <span class='ident'>zero</span>() <span class='op'>-&gt;</span> <span class='ident'>Self</span>;
+    <span class='kw'>fn</span> <span class='ident'>one</span>() <span class='op'>-&gt;</span> <span class='kw'>Self</span>;
+    <span class='kw'>fn</span> <span class='ident'>zero</span>() <span class='op'>-&gt;</span> <span class='kw'>Self</span>;
 }
 
 <span class='macro'>macro_rules</span><span class='macro'>!</span> <span class='ident'>default_impl</span>(
