@@ -42,9 +42,27 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>rblas</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="#" title="collapse all docs">[&minus;]</a>
-        </span><a id='src-0' class='srclink' href='../src/rblas/lib.rs.html#4-28' title='goto source code'>[src]</a></span></h1>
-<h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-0' class='srclink' href='../src/rblas/lib.rs.html#4-45' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>BLAS bindings and wrappers.</p>
+
+<p>Bindings are split by BLAS level and contained in a module named <code>ll</code>
+(stands for low level, not sure if that&#39;s the best name, but that&#39;s
+what it is).</p>
+
+<p>Wrappers are split likewise. They are named after the function they wrap,
+but capitalized and contained in their respective <code>ops</code> modules. To use
+these wrappers, the appropriate traits must be implemented for the type.
+These are either <code>Vector</code> or <code>Matrix</code>.</p>
+
+<ul>
+<li>Level 1: <code>vector</code></li>
+<li>Level 2: <code>matrix_vector</code></li>
+<li>Level 3: <code>matrix</code></li>
+</ul>
+</div><h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
 <table><tr><td><code>pub use vector::<a class='trait' href='../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>;</code></td></tr><tr><td><code>pub use vector::<a class='trait' href='../rblas/vector/trait.VectorOperations.html' title='rblas::vector::VectorOperations'>VectorOperations</a>;</code></td></tr><tr><td><code>pub use matrix::<a class='trait' href='../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>;</code></td></tr><tr><td><code>pub use vector::<a class='mod' href='../rblas/vector/ops/index.html' title='rblas::vector::ops'>ops</a>::*;</code></td></tr><tr><td><code>pub use matrix_vector::<a class='mod' href='../rblas/matrix_vector/ops/index.html' title='rblas::matrix_vector::ops'>ops</a>::*;</code></td></tr><tr><td><code>pub use matrix::<a class='mod' href='../rblas/matrix/ops/index.html' title='rblas::matrix::ops'>ops</a>::*;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
 <table>
                     <tr class=' module-item'>
@@ -53,6 +71,22 @@
                         <td class='docblock short'>
                              <p>Various attributes of vectors and matrices.</p>
 
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='mod' href='default/index.html'
+                               title='rblas::default'>default</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='mod' href='math/index.html'
+                               title='rblas::math'>math</a></td>
+                        <td class='docblock short'>
+                             
                         </td>
                     </tr>
                 
@@ -80,6 +114,15 @@
                         <td class='docblock short'>
                              <p>Vector operations.</p>
 
+                        </td>
+                    </tr>
+                </table><h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='macro' href='macro.mat!.html'
+                               title='rblas::mat!'>mat!</a></td>
+                        <td class='docblock short'>
+                             
                         </td>
                     </tr>
                 </table></section>
@@ -114,6 +157,10 @@
                 <code>struct</code>, <code>enum</code>,
                 <code>trait</code>, <code>typedef</code> (or
                 <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
             </p>
         </div>
     </div>

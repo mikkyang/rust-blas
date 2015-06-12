@@ -42,20 +42,22 @@
 
     <section id='main' class="content trait">
 <h1 class='fqn'><span class='in-band'>Trait <a href='../../index.html'>rblas</a>::<wbr><a href='../index.html'>matrix_vector</a>::<wbr><a href='index.html'>ops</a>::<wbr><a class='trait' href=''>Tpsv</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="#" title="collapse all docs">[&minus;]</a>
-        </span><a id='src-8763' class='srclink' href='../../../src/rblas/matrix_vector/ops.rs.html#323-325' title='goto source code'>[src]</a></span></h1>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-9335' class='srclink' href='../../../src/rblas/matrix_vector/ops.rs.html#327-329' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait Tpsv {
-    fn <a href='#tymethod.tpsv' class='fnname'>tpsv</a>(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, diagonal: <a class='enum' href='../../../rblas/attribute/enum.Diagonal.html' title='rblas::attribute::Diagonal'>Diagonal</a>, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, x: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;);
+    fn <a href='#tymethod.tpsv' class='fnname'>tpsv</a>(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, trans: <a class='enum' href='../../../rblas/attribute/enum.Transpose.html' title='rblas::attribute::Transpose'>Transpose</a>, diagonal: <a class='enum' href='../../../rblas/attribute/enum.Diagonal.html' title='rblas::attribute::Diagonal'>Diagonal</a>, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, x: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;);
 }</pre>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
-        <h3 id='tymethod.tpsv' class='method stab '><code>fn <a href='#tymethod.tpsv' class='fnname'>tpsv</a>(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, diagonal: <a class='enum' href='../../../rblas/attribute/enum.Diagonal.html' title='rblas::attribute::Diagonal'>Diagonal</a>, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, x: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;)</code></h3></div>
+        <h3 id='tymethod.tpsv' class='method stab '><code>fn <a href='#tymethod.tpsv' class='fnname'>tpsv</a>(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, trans: <a class='enum' href='../../../rblas/attribute/enum.Transpose.html' title='rblas::attribute::Transpose'>Transpose</a>, diagonal: <a class='enum' href='../../../rblas/attribute/enum.Diagonal.html' title='rblas::attribute::Diagonal'>Diagonal</a>, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, x: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;)</code></h3></div>
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
     <li><code>impl <a class='trait' href='../../../rblas/matrix_vector/ops/trait.Tpsv.html' title='rblas::matrix_vector::ops::Tpsv'>Tpsv</a> for <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a></code></li>
 <li><code>impl <a class='trait' href='../../../rblas/matrix_vector/ops/trait.Tpsv.html' title='rblas::matrix_vector::ops::Tpsv'>Tpsv</a> for <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></li>
-<li><code>impl <a class='trait' href='../../../rblas/matrix_vector/ops/trait.Tpsv.html' title='rblas::matrix_vector::ops::Tpsv'>Tpsv</a> for <a class='type' href='http://doc.rust-lang.org/num/num/complex/type.Complex32.html' title='num::complex::Complex32'>Complex32</a></code></li>
-<li><code>impl <a class='trait' href='../../../rblas/matrix_vector/ops/trait.Tpsv.html' title='rblas::matrix_vector::ops::Tpsv'>Tpsv</a> for <a class='type' href='http://doc.rust-lang.org/num/num/complex/type.Complex64.html' title='num::complex::Complex64'>Complex64</a></code></li>
+<li><code>impl <a class='trait' href='../../../rblas/matrix_vector/ops/trait.Tpsv.html' title='rblas::matrix_vector::ops::Tpsv'>Tpsv</a> for <a class='type' href='../../../num/complex/type.Complex32.html' title='num::complex::Complex32'>Complex32</a></code></li>
+<li><code>impl <a class='trait' href='../../../rblas/matrix_vector/ops/trait.Tpsv.html' title='rblas::matrix_vector::ops::Tpsv'>Tpsv</a> for <a class='type' href='../../../num/complex/type.Complex64.html' title='num::complex::Complex64'>Complex64</a></code></li>
 </ul><script type="text/javascript" async
                               src="../../../implementors/rblas/matrix_vector/ops/trait.Tpsv.js">
                       </script></section>
@@ -90,6 +92,10 @@
                 <code>struct</code>, <code>enum</code>,
                 <code>trait</code>, <code>typedef</code> (or
                 <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
             </p>
         </div>
     </div>

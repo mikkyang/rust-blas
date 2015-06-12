@@ -42,20 +42,25 @@
 
     <section id='main' class="content trait">
 <h1 class='fqn'><span class='in-band'>Trait <a href='../../index.html'>rblas</a>::<wbr><a href='../index.html'>vector</a>::<wbr><a href='index.html'>ops</a>::<wbr><a class='trait' href=''>Copy</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="#" title="collapse all docs">[&minus;]</a>
-        </span><a id='src-1583' class='srclink' href='../../../src/rblas/vector/ops.rs.html#15-17' title='goto source code'>[src]</a></span></h1>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-1584' class='srclink' href='../../../src/rblas/vector/ops.rs.html#16-21' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait Copy {
-    fn <a href='#tymethod.copy' class='fnname'>copy</a>(x: &amp;<a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, y: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;);
+    fn <a href='#tymethod.copy' class='fnname'>copy</a>(src: &amp;<a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, dst: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;);
+    fn <a href='#tymethod.copy_mat' class='fnname'>copy_mat</a>(src: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, dst: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;);
 }</pre>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
-        <h3 id='tymethod.copy' class='method stab '><code>fn <a href='#tymethod.copy' class='fnname'>copy</a>(x: &amp;<a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, y: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;)</code></h3></div>
+        <h3 id='tymethod.copy' class='method stab '><code>fn <a href='#tymethod.copy' class='fnname'>copy</a>(src: &amp;<a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, dst: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;)</code></h3><div class='docblock'><p>Copies <code>src.len()</code> elements of <code>src</code> into <code>dst</code>.</p>
+</div><h3 id='tymethod.copy_mat' class='method stab '><code>fn <a href='#tymethod.copy_mat' class='fnname'>copy_mat</a>(src: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, dst: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;)</code></h3><div class='docblock'><p>Copies the entire matrix <code>dst</code> into <code>src</code>.</p>
+</div></div>
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
     <li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Copy.html' title='rblas::vector::ops::Copy'>Copy</a> for <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a></code></li>
 <li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Copy.html' title='rblas::vector::ops::Copy'>Copy</a> for <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></li>
-<li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Copy.html' title='rblas::vector::ops::Copy'>Copy</a> for <a class='type' href='http://doc.rust-lang.org/num/num/complex/type.Complex32.html' title='num::complex::Complex32'>Complex32</a></code></li>
-<li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Copy.html' title='rblas::vector::ops::Copy'>Copy</a> for <a class='type' href='http://doc.rust-lang.org/num/num/complex/type.Complex64.html' title='num::complex::Complex64'>Complex64</a></code></li>
+<li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Copy.html' title='rblas::vector::ops::Copy'>Copy</a> for <a class='type' href='../../../num/complex/type.Complex32.html' title='num::complex::Complex32'>Complex32</a></code></li>
+<li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Copy.html' title='rblas::vector::ops::Copy'>Copy</a> for <a class='type' href='../../../num/complex/type.Complex64.html' title='num::complex::Complex64'>Complex64</a></code></li>
 </ul><script type="text/javascript" async
                               src="../../../implementors/rblas/vector/ops/trait.Copy.js">
                       </script></section>
@@ -90,6 +95,10 @@
                 <code>struct</code>, <code>enum</code>,
                 <code>trait</code>, <code>typedef</code> (or
                 <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
             </p>
         </div>
     </div>

@@ -42,14 +42,19 @@
 
     <section id='main' class="content trait">
 <h1 class='fqn'><span class='in-band'>Trait <a href='../../index.html'>rblas</a>::<wbr><a href='../index.html'>vector</a>::<wbr><a href='index.html'>ops</a>::<wbr><a class='trait' href=''>Rot</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="#" title="collapse all docs">[&minus;]</a>
-        </span><a id='src-2957' class='srclink' href='../../../src/rblas/vector/ops.rs.html#439-441' title='goto source code'>[src]</a></span></h1>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-3473' class='srclink' href='../../../src/rblas/vector/ops.rs.html#487-492' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait Rot {
     fn <a href='#tymethod.rot' class='fnname'>rot</a>(x: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, y: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, cos: &amp;Self, sin: &amp;Self);
 }</pre>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
-        <h3 id='tymethod.rot' class='method stab '><code>fn <a href='#tymethod.rot' class='fnname'>rot</a>(x: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, y: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, cos: &amp;Self, sin: &amp;Self)</code></h3></div>
+        <h3 id='tymethod.rot' class='method stab '><code>fn <a href='#tymethod.rot' class='fnname'>rot</a>(x: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, y: &amp;mut <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, cos: &amp;Self, sin: &amp;Self)</code></h3><div class='docblock'><p>Applies a Givens rotation matrix to a pair of vectors, where <code>cos</code> is
+the value of the cosine of the angle in the Givens matrix, and <code>sin</code> is
+the sine.</p>
+</div></div>
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
     <li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Rot.html' title='rblas::vector::ops::Rot'>Rot</a> for <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a></code></li>
@@ -88,6 +93,10 @@
                 <code>struct</code>, <code>enum</code>,
                 <code>trait</code>, <code>typedef</code> (or
                 <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
             </p>
         </div>
     </div>

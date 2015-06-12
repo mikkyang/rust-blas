@@ -98,9 +98,6 @@
 <span id="56">56</span>
 <span id="57">57</span>
 <span id="58">58</span>
-<span id="59">59</span>
-<span id="60">60</span>
-<span id="61">61</span>
 </pre><pre class='rust '>
 <span class='comment'>// Copyright 2014 Michael Yang. All rights reserved.</span>
 <span class='comment'>// Use of this source code is governed by a MIT-style</span>
@@ -110,7 +107,6 @@
 
 <span class='kw'>use</span> <span class='ident'>attribute</span>::{
     <span class='ident'>Order</span>,
-    <span class='ident'>Transpose</span>,
 };
 
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>ll</span>;
@@ -122,8 +118,6 @@
     <span class='kw'>fn</span> <span class='ident'>lead_dim</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>i32</span> { <span class='self'>self</span>.<span class='ident'>rows</span>() }
     <span class='doccomment'>/// The order of the matrix. Defaults to `RowMajor`.</span>
     <span class='kw'>fn</span> <span class='ident'>order</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>Order</span> { <span class='ident'>Order</span>::<span class='ident'>RowMajor</span> }
-    <span class='doccomment'>/// Returns the currently applied transpose.</span>
-    <span class='kw'>fn</span> <span class='ident'>transpose</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>Transpose</span> { <span class='ident'>Transpose</span>::<span class='ident'>NoTrans</span> }
     <span class='doccomment'>/// Returns the number of rows.</span>
     <span class='kw'>fn</span> <span class='ident'>rows</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>i32</span>;
     <span class='doccomment'>/// Returns the number of columns.</span>
@@ -196,6 +190,10 @@
                 <code>struct</code>, <code>enum</code>,
                 <code>trait</code>, <code>typedef</code> (or
                 <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
             </p>
         </div>
     </div>

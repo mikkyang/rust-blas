@@ -68,6 +68,23 @@
 <span id="26">26</span>
 <span id="27">27</span>
 <span id="28">28</span>
+<span id="29">29</span>
+<span id="30">30</span>
+<span id="31">31</span>
+<span id="32">32</span>
+<span id="33">33</span>
+<span id="34">34</span>
+<span id="35">35</span>
+<span id="36">36</span>
+<span id="37">37</span>
+<span id="38">38</span>
+<span id="39">39</span>
+<span id="40">40</span>
+<span id="41">41</span>
+<span id="42">42</span>
+<span id="43">43</span>
+<span id="44">44</span>
+<span id="45">45</span>
 </pre><pre class='rust '>
 <span class='comment'>// Copyright 2014 Michael Yang. All rights reserved.</span>
 <span class='comment'>// Use of this source code is governed by a MIT-style</span>
@@ -75,6 +92,21 @@
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>feature</span>(<span class='ident'>concat_idents</span>)]</span>
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>feature</span>(<span class='ident'>core</span>)]</span>
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>feature</span>(<span class='ident'>libc</span>)]</span>
+
+<span class='doccomment'>//! BLAS bindings and wrappers.</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! Bindings are split by BLAS level and contained in a module named `ll`</span>
+<span class='doccomment'>//! (stands for low level, not sure if that&#39;s the best name, but that&#39;s</span>
+<span class='doccomment'>//! what it is).</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! Wrappers are split likewise. They are named after the function they wrap,</span>
+<span class='doccomment'>//! but capitalized and contained in their respective `ops` modules. To use</span>
+<span class='doccomment'>//! these wrappers, the appropriate traits must be implemented for the type.</span>
+<span class='doccomment'>//! These are either `Vector` or `Matrix`.</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! * Level 1: `vector`</span>
+<span class='doccomment'>//! * Level 2: `matrix_vector`</span>
+<span class='doccomment'>//! * Level 3: `matrix`</span>
 
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>core</span>;
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>libc</span>;
@@ -89,14 +121,16 @@
 
 <span class='attribute'>#[<span class='ident'>macro_use</span>]</span>
 <span class='kw'>mod</span> <span class='ident'>prefix</span>;
-<span class='kw'>mod</span> <span class='ident'>default</span>;
 <span class='kw'>mod</span> <span class='ident'>pointer</span>;
 <span class='kw'>mod</span> <span class='ident'>scalar</span>;
 
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>attribute</span>;
+<span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>default</span>;
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>vector</span>;
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>matrix_vector</span>;
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>matrix</span>;
+
+<span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>math</span>;
 </pre>
 </section>
     <section id='search' class="content hidden"></section>
@@ -130,6 +164,10 @@
                 <code>struct</code>, <code>enum</code>,
                 <code>trait</code>, <code>typedef</code> (or
                 <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
             </p>
         </div>
     </div>

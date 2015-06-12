@@ -154,7 +154,6 @@
 <span id="112">112</span>
 <span id="113">113</span>
 <span id="114">114</span>
-<span id="115">115</span>
 </pre><pre class='rust '>
 <span class='comment'>// Copyright 2014 Michael Yang. All rights reserved.</span>
 <span class='comment'>// Use of this source code is governed by a MIT-style</span>
@@ -171,7 +170,6 @@
     <span class='ident'>Diagonal</span>,
 };
 
-<span class='attribute'>#[<span class='ident'>link</span>(<span class='ident'>name</span> <span class='op'>=</span> <span class='string'>&quot;blas&quot;</span>)]</span>
 <span class='kw'>extern</span> {
     <span class='comment'>// Multiply</span>
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>cblas_sgemv</span>(<span class='ident'>order</span>: <span class='ident'>Order</span>, <span class='ident'>trans</span>: <span class='ident'>Transpose</span>, <span class='ident'>m</span>: <span class='ident'>c_int</span>, <span class='ident'>n</span>: <span class='ident'>c_int</span>, <span class='ident'>alpha</span>: <span class='ident'>c_float</span>,       <span class='ident'>a</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>c_float</span>,  <span class='ident'>lda</span>: <span class='ident'>c_int</span>, <span class='ident'>x</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>c_float</span>,  <span class='ident'>inc_x</span>: <span class='ident'>c_int</span>, <span class='ident'>beta</span>: <span class='ident'>c_float</span>,       <span class='ident'>y</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_float</span>,  <span class='ident'>inc_y</span>: <span class='ident'>c_int</span>);
@@ -304,6 +302,10 @@
                 <code>struct</code>, <code>enum</code>,
                 <code>trait</code>, <code>typedef</code> (or
                 <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
             </p>
         </div>
     </div>
