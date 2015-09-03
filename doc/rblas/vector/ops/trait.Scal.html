@@ -45,16 +45,15 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-2395' class='srclink' href='../../../src/rblas/vector/ops.rs.html#127-132' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-2395' class='srclink' href='../../../src/rblas/vector/ops.rs.html#127-130' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait Scal: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> {
     fn <a href='#tymethod.scal' class='fnname'>scal</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(alpha: &amp;Self, x: &amp;mut V);
     fn <a href='#tymethod.scal_mat' class='fnname'>scal_mat</a>(alpha: &amp;Self, x: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;);
-}</pre>
+}</pre><div class='docblock'><p>Computes <code>a * x</code> and stores the result in <code>x</code>.</p>
+</div>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
-        <h3 id='tymethod.scal' class='method stab '><code>fn <a href='#tymethod.scal' class='fnname'>scal</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(alpha: &amp;Self, x: &amp;mut V)</code></h3><div class='docblock'><p>Computes <code>a * x</code> and stores the result in <code>x</code>.</p>
-</div><h3 id='tymethod.scal_mat' class='method stab '><code>fn <a href='#tymethod.scal_mat' class='fnname'>scal_mat</a>(alpha: &amp;Self, x: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;)</code></h3><div class='docblock'><p>Computes <code>a * x</code> and stores the result in <code>x</code>.</p>
-</div></div>
+        <h3 id='tymethod.scal' class='method stab '><code>fn <a href='#tymethod.scal' class='fnname'>scal</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(alpha: &amp;Self, x: &amp;mut V)</code></h3><h3 id='tymethod.scal_mat' class='method stab '><code>fn <a href='#tymethod.scal_mat' class='fnname'>scal_mat</a>(alpha: &amp;Self, x: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;)</code></h3></div>
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
     <li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Scal.html' title='rblas::vector::ops::Scal'>Scal</a> for <a href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a></code></li>
