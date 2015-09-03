@@ -34,7 +34,7 @@
             <div class="search-container">
                 <input class="search-input" name="search"
                        autocomplete="off"
-                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
                        type="search">
             </div>
         </form>
@@ -98,6 +98,12 @@
 <span id="56">56</span>
 <span id="57">57</span>
 <span id="58">58</span>
+<span id="59">59</span>
+<span id="60">60</span>
+<span id="61">61</span>
+<span id="62">62</span>
+<span id="63">63</span>
+<span id="64">64</span>
 </pre><pre class='rust '>
 <span class='comment'>// Copyright 2014 Michael Yang. All rights reserved.</span>
 <span class='comment'>// Use of this source code is governed by a MIT-style</span>
@@ -114,8 +120,14 @@
 
 <span class='doccomment'>/// Methods that allow a type to be used in BLAS functions as a matrix.</span>
 <span class='kw'>pub</span> <span class='kw'>trait</span> <span class='ident'>Matrix</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> {
-    <span class='doccomment'>/// The leading dimension of the matrix. Defaults to `rows`.</span>
-    <span class='kw'>fn</span> <span class='ident'>lead_dim</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>i32</span> { <span class='self'>self</span>.<span class='ident'>rows</span>() }
+    <span class='doccomment'>/// The leading dimension of the matrix. Defaults to `cols` for `RowMajor`</span>
+    <span class='doccomment'>/// order and &#39;rows&#39; for `ColMajor` order.</span>
+    <span class='kw'>fn</span> <span class='ident'>lead_dim</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>i32</span> {
+        <span class='kw'>match</span> <span class='self'>self</span>.<span class='ident'>order</span>() {
+            <span class='ident'>Order</span>::<span class='ident'>RowMajor</span> <span class='op'>=&gt;</span> <span class='self'>self</span>.<span class='ident'>cols</span>(),
+            <span class='ident'>Order</span>::<span class='ident'>ColMajor</span> <span class='op'>=&gt;</span> <span class='self'>self</span>.<span class='ident'>rows</span>(),
+        }
+    }
     <span class='doccomment'>/// The order of the matrix. Defaults to `RowMajor`.</span>
     <span class='kw'>fn</span> <span class='ident'>order</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>Order</span> { <span class='ident'>Order</span>::<span class='ident'>RowMajor</span> }
     <span class='doccomment'>/// Returns the number of rows.</span>
@@ -164,37 +176,44 @@
     <section class="footer"></section>
 
     <div id="help" class="hidden">
-        <div class="shortcuts">
-            <h1>Keyboard shortcuts</h1>
-            <dl>
-                <dt>?</dt>
-                <dd>Show this help dialog</dd>
-                <dt>S</dt>
-                <dd>Focus the search field</dd>
-                <dt>&larrb;</dt>
-                <dd>Move up in search results</dd>
-                <dt>&rarrb;</dt>
-                <dd>Move down in search results</dd>
-                <dt>&#9166;</dt>
-                <dd>Go to active search result</dd>
-            </dl>
-        </div>
-        <div class="infos">
-            <h1>Search tricks</h1>
-            <p>
-                Prefix searches with a type followed by a colon (e.g.
-                <code>fn:</code>) to restrict the search to a given type.
-            </p>
-            <p>
-                Accepted types are: <code>fn</code>, <code>mod</code>,
-                <code>struct</code>, <code>enum</code>,
-                <code>trait</code>, <code>typedef</code> (or
-                <code>tdef</code>).
-            </p>
-            <p>
-                Search functions by type signature (e.g.
-                <code>vec -> usize</code>)
-            </p>
+        <div>
+            <div class="shortcuts">
+                <h1>Keyboard Shortcuts</h1>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h1>Search Tricks</h1>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
         </div>
     </div>
 
