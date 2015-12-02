@@ -45,19 +45,19 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-1914' class='srclink' href='../../../src/rblas/vector/ops.rs.html#50-53' title='goto source code'>[src]</a></span></h1>
-<pre class='rust trait'>pub trait Axpy: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> {
-    fn <a href='#tymethod.axpy' class='fnname'>axpy</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, W: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(alpha: &amp;Self, x: &amp;V, y: &amp;mut W);
+        </span><a id='src-2026' class='srclink' href='../../../src/rblas/vector/ops.rs.html#50-53' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait Axpy: <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> {
+    fn <a href='#tymethod.axpy' class='fnname'>axpy</a>&lt;V: ?<a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, W: ?<a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(alpha: &amp;Self, x: &amp;V, y: &amp;mut W);
     fn <a href='#tymethod.axpy_mat' class='fnname'>axpy_mat</a>(alpha: &amp;Self, x: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, y: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;);
 }</pre><div class='docblock'><p>Computes <code>a * x + y</code> and stores the result in <code>y</code>.</p>
 </div>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
-        <h3 id='tymethod.axpy' class='method stab '><code>fn <a href='#tymethod.axpy' class='fnname'>axpy</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, W: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(alpha: &amp;Self, x: &amp;V, y: &amp;mut W)</code></h3><h3 id='tymethod.axpy_mat' class='method stab '><code>fn <a href='#tymethod.axpy_mat' class='fnname'>axpy_mat</a>(alpha: &amp;Self, x: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, y: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;)</code></h3></div>
+        <h3 id='tymethod.axpy' class='method stab '><code>fn <a href='#tymethod.axpy' class='fnname'>axpy</a>&lt;V: ?<a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, W: ?<a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(alpha: &amp;Self, x: &amp;V, y: &amp;mut W)</code></h3><h3 id='tymethod.axpy_mat' class='method stab '><code>fn <a href='#tymethod.axpy_mat' class='fnname'>axpy_mat</a>(alpha: &amp;Self, x: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, y: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;)</code></h3></div>
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
-    <li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Axpy.html' title='rblas::vector::ops::Axpy'>Axpy</a> for <a href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a></code></li>
-<li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Axpy.html' title='rblas::vector::ops::Axpy'>Axpy</a> for <a href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></li>
+    <li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Axpy.html' title='rblas::vector::ops::Axpy'>Axpy</a> for <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a></code></li>
+<li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Axpy.html' title='rblas::vector::ops::Axpy'>Axpy</a> for <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></li>
 <li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Axpy.html' title='rblas::vector::ops::Axpy'>Axpy</a> for <a class='type' href='../../../num/complex/type.Complex32.html' title='num::complex::Complex32'>Complex32</a></code></li>
 <li><code>impl <a class='trait' href='../../../rblas/vector/ops/trait.Axpy.html' title='rblas::vector::ops::Axpy'>Axpy</a> for <a class='type' href='../../../num/complex/type.Complex64.html' title='num::complex::Complex64'>Complex64</a></code></li>
 </ul><script type="text/javascript" async
@@ -97,8 +97,8 @@
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>type</code>, <code>macro</code>,
-                    and <code>const</code>.
+                    <code>trait</code>, <code>typedef</code> (or
+                    <code>tdef</code>).
                 </p>
 
                 <p>

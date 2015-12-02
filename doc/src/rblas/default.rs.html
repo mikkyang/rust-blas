@@ -71,6 +71,11 @@
 <span id="29">29</span>
 <span id="30">30</span>
 <span id="31">31</span>
+<span id="32">32</span>
+<span id="33">33</span>
+<span id="34">34</span>
+<span id="35">35</span>
+<span id="36">36</span>
 </pre><pre class='rust '>
 <span class='comment'>// Copyright 2014 Michael Yang. All rights reserved.</span>
 <span class='comment'>// Use of this source code is governed by a MIT-style</span>
@@ -81,6 +86,7 @@
 <span class='kw'>pub</span> <span class='kw'>trait</span> <span class='ident'>Default</span> {
     <span class='kw'>fn</span> <span class='ident'>one</span>() <span class='op'>-&gt;</span> <span class='kw'>Self</span>;
     <span class='kw'>fn</span> <span class='ident'>zero</span>() <span class='op'>-&gt;</span> <span class='kw'>Self</span>;
+    <span class='kw'>fn</span> <span class='ident'>neg_one</span>() <span class='op'>-&gt;</span> <span class='kw'>Self</span>;
 }
 
 <span class='macro'>macro_rules</span><span class='macro'>!</span> <span class='ident'>default_impl</span>(
@@ -90,6 +96,8 @@
             <span class='kw'>fn</span> <span class='ident'>one</span>() <span class='op'>-&gt;</span> <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span> { <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>ov</span> }
             <span class='attribute'>#[<span class='ident'>inline</span>]</span>
             <span class='kw'>fn</span> <span class='ident'>zero</span>() <span class='op'>-&gt;</span> <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span> { <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>zv</span> }
+            <span class='attribute'>#[<span class='ident'>inline</span>]</span>
+            <span class='kw'>fn</span> <span class='ident'>neg_one</span>() <span class='op'>-&gt;</span> <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span> { <span class='op'>-</span><span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>ov</span> }
         }
 
         <span class='kw'>impl</span> <span class='ident'>Default</span> <span class='kw'>for</span> <span class='ident'>Complex</span><span class='op'>&lt;</span><span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span><span class='op'>&gt;</span> {
@@ -97,6 +105,8 @@
             <span class='kw'>fn</span> <span class='ident'>one</span>() <span class='op'>-&gt;</span> <span class='ident'>Complex</span><span class='op'>&lt;</span><span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span><span class='op'>&gt;</span> { <span class='ident'>Complex</span>::<span class='ident'>new</span>(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>ov</span>, <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>zv</span>) }
             <span class='attribute'>#[<span class='ident'>inline</span>]</span>
             <span class='kw'>fn</span> <span class='ident'>zero</span>() <span class='op'>-&gt;</span> <span class='ident'>Complex</span><span class='op'>&lt;</span><span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span><span class='op'>&gt;</span> { <span class='ident'>Complex</span>::<span class='ident'>new</span>(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>zv</span>, <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>zv</span>) }
+            <span class='attribute'>#[<span class='ident'>inline</span>]</span>
+            <span class='kw'>fn</span> <span class='ident'>neg_one</span>() <span class='op'>-&gt;</span> <span class='ident'>Complex</span><span class='op'>&lt;</span><span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>t</span><span class='op'>&gt;</span> { <span class='ident'>Complex</span>::<span class='ident'>new</span>(<span class='op'>-</span><span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>ov</span>, <span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>zv</span>) }
         }
     }
 );
@@ -139,8 +149,8 @@
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>type</code>, <code>macro</code>,
-                    and <code>const</code>.
+                    <code>trait</code>, <code>typedef</code> (or
+                    <code>tdef</code>).
                 </p>
 
                 <p>

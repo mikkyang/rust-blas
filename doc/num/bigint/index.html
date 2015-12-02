@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../main.css">
 
-    <link rel="shortcut icon" href="http://www.rust-lang.org/favicon.ico">
+    <link rel="shortcut icon" href="http://rust-num.github.io/num/favicon.ico">
     
 </head>
 <body class="rustdoc">
@@ -25,7 +25,7 @@
     
 
     <section class="sidebar">
-        <a href='../../num/index.html'><img src='http://www.rust-lang.org/logos/rust-logo-128x128-blk-v2.png' alt='' width='100'></a>
+        <a href='../../num/index.html'><img src='http://rust-num.github.io/num/rust-logo-128x128-blk-v2.png' alt='' width='100'></a>
         <p class='location'><a href='../index.html'>num</a></p><script>window.sidebarCurrent = {name: 'bigint', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
     </section>
 
@@ -45,7 +45,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-38' class='srclink' href='../../src/num/bigint.rs.html#11-3450' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-38' class='srclink' href='../../src/num/bigint.rs.html#11-3738' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>A Big integer (signed version: <code>BigInt</code>, unsigned version: <code>BigUint</code>).</p>
 
 <p>A <code>BigUint</code> is represented as a vector of <code>BigDigit</code>s.
@@ -64,7 +64,7 @@ fn main() {
     fn fib(n: usize) -&gt; BigUint {
         let mut f0: BigUint = Zero::zero();
         let mut f1: BigUint = One::one();
-        for _ in (0..n) {
+        for _ in 0..n {
             let f2 = f0 + &amp;f1;
             // This is a low cost way of swapping f0 with f1 and f1 with f2.
             f0 = replace(&amp;mut f1, f2);
@@ -83,7 +83,7 @@ fn main() {
 <span class='kw'>fn</span> <span class='ident'>fib</span>(<span class='ident'>n</span>: <span class='ident'>usize</span>) <span class='op'>-&gt;</span> <span class='ident'>BigUint</span> {
     <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>f0</span>: <span class='ident'>BigUint</span> <span class='op'>=</span> <span class='ident'>Zero</span>::<span class='ident'>zero</span>();
     <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>f1</span>: <span class='ident'>BigUint</span> <span class='op'>=</span> <span class='ident'>One</span>::<span class='ident'>one</span>();
-    <span class='kw'>for</span> _ <span class='kw'>in</span> (<span class='number'>0</span>..<span class='ident'>n</span>) {
+    <span class='kw'>for</span> _ <span class='kw'>in</span> <span class='number'>0</span>..<span class='ident'>n</span> {
         <span class='kw'>let</span> <span class='ident'>f2</span> <span class='op'>=</span> <span class='ident'>f0</span> <span class='op'>+</span> <span class='kw-2'>&amp;</span><span class='ident'>f1</span>;
         <span class='comment'>// This is a low cost way of swapping f0 with f1 and f1 with f2.</span>
         <span class='ident'>f0</span> <span class='op'>=</span> <span class='ident'>replace</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>f1</span>, <span class='ident'>f2</span>);
@@ -150,14 +150,6 @@ println!(&quot;{}&quot;, a * b);
                         <td class='docblock short'>
                              <p>A big unsigned integer type.</p>
 
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.RadixFmt.html'
-                               title='num::bigint::RadixFmt'>RadixFmt</a></td>
-                        <td class='docblock short'>
-                             
                         </td>
                     </tr>
                 </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
@@ -269,8 +261,8 @@ size is the double of the size of <code>BigDigit</code>.</p>
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>type</code>, <code>macro</code>,
-                    and <code>const</code>.
+                    <code>trait</code>, <code>typedef</code> (or
+                    <code>tdef</code>).
                 </p>
 
                 <p>

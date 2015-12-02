@@ -47,11 +47,11 @@
             </a>
         </span><a id='src-30687' class='srclink' href='../src/rustc_serialize/serialize.rs.html#693-697' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait EncoderHelpers: <a class='trait' href='../rustc_serialize/trait.Encoder.html' title='rustc_serialize::Encoder'>Encoder</a> {
-    fn <a href='#tymethod.emit_from_vec' class='fnname'>emit_from_vec</a>&lt;T, F&gt;(&amp;mut self, v: <a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a>T<a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>, f: F) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, Self::Error&gt; <span class='where'>where F: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;mut Self, &amp;T) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, Self::Error&gt;</span>;
+    fn <a href='#tymethod.emit_from_vec' class='fnname'>emit_from_vec</a>&lt;T, F&gt;(&amp;mut self, v: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a>T<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>, f: F) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, Self::Error&gt; <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;mut Self, &amp;T) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, Self::Error&gt;</span>;
 }</pre>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
-        <h3 id='tymethod.emit_from_vec' class='method stab '><code>fn <a href='#tymethod.emit_from_vec' class='fnname'>emit_from_vec</a>&lt;T, F&gt;(&amp;mut self, v: <a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a>T<a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>, f: F) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, Self::Error&gt; <span class='where'>where F: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;mut Self, &amp;T) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, Self::Error&gt;</span></code></h3></div>
+        <h3 id='tymethod.emit_from_vec' class='method stab '><code>fn <a href='#tymethod.emit_from_vec' class='fnname'>emit_from_vec</a>&lt;T, F&gt;(&amp;mut self, v: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a>T<a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>, f: F) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, Self::Error&gt; <span class='where'>where F: <a class='trait' href='http://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;mut Self, &amp;T) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, Self::Error&gt;</span></code></h3></div>
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
     </ul><script type="text/javascript" async
@@ -91,8 +91,8 @@
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>type</code>, <code>macro</code>,
-                    and <code>const</code>.
+                    <code>trait</code>, <code>typedef</code> (or
+                    <code>tdef</code>).
                 </p>
 
                 <p>
