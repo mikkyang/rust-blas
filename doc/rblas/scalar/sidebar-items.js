@@ -1,1 +1,1 @@
-initSidebarItems({"trait":[["Scalar",""]]});
+initSidebarItems({});

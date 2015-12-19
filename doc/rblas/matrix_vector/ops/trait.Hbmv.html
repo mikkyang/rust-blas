@@ -24,10 +24,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../../index.html'>rblas</a>::<wbr><a href='../index.html'>matrix_vector</a>::<wbr><a href='index.html'>ops</a></p><script>window.sidebarCurrent = {name: 'Hbmv', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -45,13 +45,13 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-8922' class='srclink' href='../../../src/rblas/matrix_vector/ops.rs.html#315-317' title='goto source code'>[src]</a></span></h1>
-<pre class='rust trait'>pub trait Hbmv: <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> {
-    fn <a href='#tymethod.hbmv' class='fnname'>hbmv</a>&lt;V: ?<a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, W: ?<a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, alpha: &amp;Self, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.BandMatrix.html' title='rblas::matrix::BandMatrix'>BandMatrix</a>&lt;Self&gt;, x: &amp;V, beta: &amp;Self, y: &amp;mut W);
+        </span><a id='src-2085' class='srclink' href='../../../src/rblas/matrix_vector/ops.rs.html#318-320' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait Hbmv: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> {
+    fn <a href='#tymethod.hbmv' class='fnname'>hbmv</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, W: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, alpha: &amp;Self, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.BandMatrix.html' title='rblas::matrix::BandMatrix'>BandMatrix</a>&lt;Self&gt;, x: &amp;V, beta: &amp;Self, y: &amp;mut W);
 }</pre>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
-        <h3 id='tymethod.hbmv' class='method stab '><code>fn <a href='#tymethod.hbmv' class='fnname'>hbmv</a>&lt;V: ?<a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, W: ?<a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, alpha: &amp;Self, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.BandMatrix.html' title='rblas::matrix::BandMatrix'>BandMatrix</a>&lt;Self&gt;, x: &amp;V, beta: &amp;Self, y: &amp;mut W)</code></h3></div>
+        <h3 id='tymethod.hbmv' class='method stab '><code>fn <a href='#tymethod.hbmv' class='fnname'>hbmv</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, W: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, alpha: &amp;Self, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.BandMatrix.html' title='rblas::matrix::BandMatrix'>BandMatrix</a>&lt;Self&gt;, x: &amp;V, beta: &amp;Self, y: &amp;mut W)</code></h3></div>
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
     <li><code>impl <a class='trait' href='../../../rblas/matrix_vector/ops/trait.Hbmv.html' title='rblas::matrix_vector::ops::Hbmv'>Hbmv</a> for <a class='type' href='../../../num/complex/type.Complex32.html' title='num::complex::Complex32'>Complex32</a></code></li>
@@ -63,10 +63,12 @@
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -83,7 +85,7 @@
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -93,8 +95,8 @@
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>typedef</code> (or
-                    <code>tdef</code>).
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
                 </p>
 
                 <p>
@@ -103,7 +105,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -115,6 +117,6 @@
     <script src="../../../jquery.js"></script>
     <script src="../../../main.js"></script>
     
-    <script async src="../../../search-index.js"></script>
+    <script defer src="../../../search-index.js"></script>
 </body>
 </html>

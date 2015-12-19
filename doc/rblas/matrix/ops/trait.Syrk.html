@@ -24,10 +24,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../../index.html'>rblas</a>::<wbr><a href='../index.html'>matrix</a>::<wbr><a href='index.html'>ops</a></p><script>window.sidebarCurrent = {name: 'Syrk', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -45,8 +45,8 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-14071' class='srclink' href='../../../src/rblas/matrix/ops.rs.html#187-189' title='goto source code'>[src]</a></span></h1>
-<pre class='rust trait'>pub trait Syrk: <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> {
+        </span><a id='src-3172' class='srclink' href='../../../src/rblas/matrix/ops.rs.html#188-190' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait Syrk: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> {
     fn <a href='#tymethod.syrk' class='fnname'>syrk</a>(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, trans: <a class='enum' href='../../../rblas/attribute/enum.Transpose.html' title='rblas::attribute::Transpose'>Transpose</a>, alpha: &amp;Self, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, beta: &amp;Self, c: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;);
 }</pre>
             <h2 id='required-methods'>Required Methods</h2>
@@ -54,8 +54,8 @@
         <h3 id='tymethod.syrk' class='method stab '><code>fn <a href='#tymethod.syrk' class='fnname'>syrk</a>(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, trans: <a class='enum' href='../../../rblas/attribute/enum.Transpose.html' title='rblas::attribute::Transpose'>Transpose</a>, alpha: &amp;Self, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;, beta: &amp;Self, c: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;)</code></h3></div>
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
-    <li><code>impl <a class='trait' href='../../../rblas/matrix/ops/trait.Syrk.html' title='rblas::matrix::ops::Syrk'>Syrk</a> for <a href='http://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a></code></li>
-<li><code>impl <a class='trait' href='../../../rblas/matrix/ops/trait.Syrk.html' title='rblas::matrix::ops::Syrk'>Syrk</a> for <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></li>
+    <li><code>impl <a class='trait' href='../../../rblas/matrix/ops/trait.Syrk.html' title='rblas::matrix::ops::Syrk'>Syrk</a> for <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a></code></li>
+<li><code>impl <a class='trait' href='../../../rblas/matrix/ops/trait.Syrk.html' title='rblas::matrix::ops::Syrk'>Syrk</a> for <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></li>
 <li><code>impl <a class='trait' href='../../../rblas/matrix/ops/trait.Syrk.html' title='rblas::matrix::ops::Syrk'>Syrk</a> for <a class='type' href='../../../num/complex/type.Complex32.html' title='num::complex::Complex32'>Complex32</a></code></li>
 <li><code>impl <a class='trait' href='../../../rblas/matrix/ops/trait.Syrk.html' title='rblas::matrix::ops::Syrk'>Syrk</a> for <a class='type' href='../../../num/complex/type.Complex64.html' title='num::complex::Complex64'>Complex64</a></code></li>
 </ul><script type="text/javascript" async
@@ -65,10 +65,12 @@
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -85,7 +87,7 @@
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -95,8 +97,8 @@
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>typedef</code> (or
-                    <code>tdef</code>).
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
                 </p>
 
                 <p>
@@ -105,7 +107,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -117,6 +119,6 @@
     <script src="../../../jquery.js"></script>
     <script src="../../../main.js"></script>
     
-    <script async src="../../../search-index.js"></script>
+    <script defer src="../../../search-index.js"></script>
 </body>
 </html>

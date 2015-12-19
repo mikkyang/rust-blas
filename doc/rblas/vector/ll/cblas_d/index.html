@@ -24,10 +24,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../../../index.html'>rblas</a>::<wbr><a href='../../index.html'>vector</a>::<wbr><a href='../index.html'>ll</a></p><script>window.sidebarCurrent = {name: 'cblas_d', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -45,7 +45,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-1035' class='srclink' href='../../../../src/rblas/vector/ll.rs.html#43-77' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-259' class='srclink' href='../../../../src/rblas/vector/ll.rs.html#43-77' title='goto source code'>[src]</a></span></h1>
 <h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
 <table><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_dcopy.html' title='rblas::vector::ll::cblas_d::cblas_dcopy'>cblas_dcopy</a> as copy;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_daxpy.html' title='rblas::vector::ll::cblas_d::cblas_daxpy'>cblas_daxpy</a> as axpy;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_dscal.html' title='rblas::vector::ll::cblas_d::cblas_dscal'>cblas_dscal</a> as scal;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_dswap.html' title='rblas::vector::ll::cblas_d::cblas_dswap'>cblas_dswap</a> as swap;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_dsdot.html' title='rblas::vector::ll::cblas_d::cblas_dsdot'>cblas_dsdot</a> as dsdot;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_ddot.html' title='rblas::vector::ll::cblas_d::cblas_ddot'>cblas_ddot</a> as dot;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_dasum.html' title='rblas::vector::ll::cblas_d::cblas_dasum'>cblas_dasum</a> as asum;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_dzasum.html' title='rblas::vector::ll::cblas_d::cblas_dzasum'>cblas_dzasum</a> as zasum;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_dnrm2.html' title='rblas::vector::ll::cblas_d::cblas_dnrm2'>cblas_dnrm2</a> as nrm2;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_dznrm2.html' title='rblas::vector::ll::cblas_d::cblas_dznrm2'>cblas_dznrm2</a> as znrm2;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_drot.html' title='rblas::vector::ll::cblas_d::cblas_drot'>cblas_drot</a> as rot;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_drotm.html' title='rblas::vector::ll::cblas_d::cblas_drotm'>cblas_drotm</a> as rotm;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_drotg.html' title='rblas::vector::ll::cblas_d::cblas_drotg'>cblas_drotg</a> as rotg;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/vector/ll/cblas_d/fn.cblas_drotmg.html' title='rblas::vector::ll::cblas_d::cblas_drotmg'>cblas_drotmg</a> as rotmg;</code></td></tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
 <table>
@@ -165,10 +165,12 @@
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -185,7 +187,7 @@
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -195,8 +197,8 @@
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>typedef</code> (or
-                    <code>tdef</code>).
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
                 </p>
 
                 <p>
@@ -205,7 +207,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -217,6 +219,6 @@
     <script src="../../../../jquery.js"></script>
     <script src="../../../../main.js"></script>
     
-    <script async src="../../../../search-index.js"></script>
+    <script defer src="../../../../search-index.js"></script>
 </body>
 </html>

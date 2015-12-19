@@ -24,10 +24,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -533,6 +533,9 @@
 <span id="491">491</span>
 <span id="492">492</span>
 <span id="493">493</span>
+<span id="494">494</span>
+<span id="495">495</span>
+<span id="496">496</span>
 </pre><pre class='rust '>
 <span class='comment'>// Copyright 2014 Michael Yang. All rights reserved.</span>
 <span class='comment'>// Use of this source code is governed by a MIT-style</span>
@@ -575,11 +578,12 @@
 <span class='attribute'>#[<span class='ident'>cfg</span>(<span class='ident'>test</span>)]</span>
 <span class='kw'>mod</span> <span class='ident'>gemv_tests</span> {
     <span class='kw'>use</span> <span class='ident'>attribute</span>::<span class='ident'>Transpose</span>;
+    <span class='kw'>use</span> <span class='ident'>matrix</span>::<span class='ident'>tests</span>::<span class='ident'>M</span>;
     <span class='kw'>use</span> <span class='ident'>matrix_vector</span>::<span class='ident'>ops</span>::<span class='ident'>Gemv</span>;
 
     <span class='attribute'>#[<span class='ident'>test</span>]</span>
     <span class='kw'>fn</span> <span class='ident'>real</span>() {
-        <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='number'>2</span>, <span class='number'>2</span>, <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>1.0</span>, <span class='op'>-</span><span class='number'>2.0</span>, <span class='number'>2.0</span>, <span class='op'>-</span><span class='number'>4.0</span>]);
+        <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> <span class='ident'>M</span>(<span class='number'>2</span>, <span class='number'>2</span>, <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>1.0</span>, <span class='op'>-</span><span class='number'>2.0</span>, <span class='number'>2.0</span>, <span class='op'>-</span><span class='number'>4.0</span>]);
         <span class='kw'>let</span> <span class='ident'>x</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>2.0</span>, <span class='number'>1.0</span>];
         <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>y</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>1.0</span>, <span class='number'>2.0</span>];
         <span class='kw'>let</span> <span class='ident'>t</span> <span class='op'>=</span> <span class='ident'>Transpose</span>::<span class='ident'>NoTrans</span>;
@@ -591,7 +595,7 @@
 
     <span class='attribute'>#[<span class='ident'>test</span>]</span>
     <span class='kw'>fn</span> <span class='ident'>non_square</span>() {
-        <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='number'>2</span>, <span class='number'>3</span>,
+        <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> <span class='ident'>M</span>(<span class='number'>2</span>, <span class='number'>3</span>,
                  <span class='macro'>vec</span><span class='macro'>!</span>[
                  <span class='number'>1.0</span>, <span class='op'>-</span><span class='number'>3.0</span>, <span class='number'>1.0</span>,
                  <span class='number'>2.0</span>, <span class='op'>-</span><span class='number'>6.0</span>, <span class='number'>2.0</span>]);
@@ -605,7 +609,7 @@
 
     <span class='attribute'>#[<span class='ident'>test</span>]</span>
     <span class='kw'>fn</span> <span class='ident'>transpose</span>() {
-        <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='number'>3</span>, <span class='number'>2</span>,
+        <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> <span class='ident'>M</span>(<span class='number'>3</span>, <span class='number'>2</span>,
                  <span class='macro'>vec</span><span class='macro'>!</span>[
                      <span class='number'>1.0</span>, <span class='number'>2.0</span>,
                      <span class='op'>-</span><span class='number'>3.0</span>, <span class='op'>-</span><span class='number'>6.0</span>,
@@ -653,13 +657,14 @@
 <span class='attribute'>#[<span class='ident'>cfg</span>(<span class='ident'>test</span>)]</span>
 <span class='kw'>mod</span> <span class='ident'>symv_tests</span> {
     <span class='kw'>use</span> <span class='ident'>attribute</span>::{<span class='ident'>Symmetry</span>, <span class='ident'>Transpose</span>};
+    <span class='kw'>use</span> <span class='ident'>matrix</span>::<span class='ident'>tests</span>::<span class='ident'>M</span>;
     <span class='kw'>use</span> <span class='ident'>matrix_vector</span>::<span class='ident'>ops</span>::{<span class='ident'>Gemv</span>, <span class='ident'>Symv</span>};
 
     <span class='attribute'>#[<span class='ident'>test</span>]</span>
     <span class='kw'>fn</span> <span class='ident'>real</span>() {
         <span class='kw'>let</span> <span class='ident'>x</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>2.0</span>, <span class='number'>1.0</span>];
         <span class='kw'>let</span> <span class='ident'>gemv</span> <span class='op'>=</span> {
-            <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='number'>2</span>, <span class='number'>2</span>, <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>1.0</span>, <span class='op'>-</span><span class='number'>2.0</span>, <span class='op'>-</span><span class='number'>2.0</span>, <span class='number'>1.0</span>]);
+            <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> <span class='ident'>M</span>(<span class='number'>2</span>, <span class='number'>2</span>, <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>1.0</span>, <span class='op'>-</span><span class='number'>2.0</span>, <span class='op'>-</span><span class='number'>2.0</span>, <span class='number'>1.0</span>]);
             <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>y</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>1.0</span>, <span class='number'>2.0</span>];
             <span class='kw'>let</span> <span class='ident'>t</span> <span class='op'>=</span> <span class='ident'>Transpose</span>::<span class='ident'>NoTrans</span>;
 
@@ -669,7 +674,7 @@
 
         <span class='kw'>let</span> <span class='ident'>symv_upper</span> <span class='op'>=</span> {
             <span class='comment'>// symv shouldn&#39;t look at some elements</span>
-            <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='number'>2</span>, <span class='number'>2</span>, <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>1.0</span>, <span class='op'>-</span><span class='number'>2.0</span>, <span class='number'>0.0</span>, <span class='number'>1.0</span>]);
+            <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> <span class='ident'>M</span>(<span class='number'>2</span>, <span class='number'>2</span>, <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>1.0</span>, <span class='op'>-</span><span class='number'>2.0</span>, <span class='number'>0.0</span>, <span class='number'>1.0</span>]);
             <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>y</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>1.0</span>, <span class='number'>2.0</span>];
             <span class='kw'>let</span> <span class='ident'>s</span> <span class='op'>=</span> <span class='ident'>Symmetry</span>::<span class='ident'>Upper</span>;
 
@@ -679,7 +684,7 @@
 
         <span class='kw'>let</span> <span class='ident'>symv_lower</span> <span class='op'>=</span> {
             <span class='comment'>// symv shouldn&#39;t look at some elements</span>
-            <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='number'>2</span>, <span class='number'>2</span>, <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>1.0</span>, <span class='number'>0.0</span>, <span class='op'>-</span><span class='number'>2.0</span>, <span class='number'>1.0</span>]);
+            <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> <span class='ident'>M</span>(<span class='number'>2</span>, <span class='number'>2</span>, <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>1.0</span>, <span class='number'>0.0</span>, <span class='op'>-</span><span class='number'>2.0</span>, <span class='number'>1.0</span>]);
             <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>y</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>1.0</span>, <span class='number'>2.0</span>];
             <span class='kw'>let</span> <span class='ident'>s</span> <span class='op'>=</span> <span class='ident'>Symmetry</span>::<span class='ident'>Lower</span>;
 
@@ -732,11 +737,12 @@
 <span class='attribute'>#[<span class='ident'>cfg</span>(<span class='ident'>test</span>)]</span>
 <span class='kw'>mod</span> <span class='ident'>ger_tests</span> {
     <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>iter</span>::<span class='ident'>repeat</span>;
+    <span class='kw'>use</span> <span class='ident'>matrix</span>::<span class='ident'>tests</span>::<span class='ident'>M</span>;
     <span class='kw'>use</span> <span class='ident'>matrix_vector</span>::<span class='ident'>ops</span>::<span class='ident'>Ger</span>;
 
     <span class='attribute'>#[<span class='ident'>test</span>]</span>
     <span class='kw'>fn</span> <span class='ident'>real</span>() {
-        <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>a</span> <span class='op'>=</span> (<span class='number'>3</span>, <span class='number'>3</span>, <span class='ident'>repeat</span>(<span class='number'>0.0</span>).<span class='ident'>take</span>(<span class='number'>9</span>).<span class='ident'>collect</span>());
+        <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>a</span> <span class='op'>=</span> <span class='ident'>M</span>(<span class='number'>3</span>, <span class='number'>3</span>, <span class='ident'>repeat</span>(<span class='number'>0.0</span>).<span class='ident'>take</span>(<span class='number'>9</span>).<span class='ident'>collect</span>());
         <span class='kw'>let</span> <span class='ident'>x</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>2.0</span>, <span class='number'>1.0</span>, <span class='number'>4.0</span>];
         <span class='kw'>let</span> <span class='ident'>y</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>3.0</span>, <span class='number'>6.0</span>, <span class='op'>-</span><span class='number'>1.0</span>];
 
@@ -1033,10 +1039,12 @@
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -1053,7 +1061,7 @@
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -1063,8 +1071,8 @@
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>typedef</code> (or
-                    <code>tdef</code>).
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
                 </p>
 
                 <p>
@@ -1073,7 +1081,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -1085,6 +1093,6 @@
     <script src="../../../jquery.js"></script>
     <script src="../../../main.js"></script>
     
-    <script async src="../../../search-index.js"></script>
+    <script defer src="../../../search-index.js"></script>
 </body>
 </html>

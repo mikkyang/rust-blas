@@ -1,1 +1,1 @@
-initSidebarItems({"trait":[["CPtr",""]]});
+initSidebarItems({});

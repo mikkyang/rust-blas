@@ -24,10 +24,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -169,7 +169,7 @@
 <span class='comment'>// license that can be found in the LICENSE file.</span>
 
 <span class='doccomment'>//! Vector operations.</span>
-
+<span class='kw'>use</span> <span class='ident'>libc</span>::<span class='ident'>c_int</span>;
 <span class='kw'>use</span> <span class='ident'>num</span>::<span class='ident'>traits</span>::<span class='ident'>NumCast</span>;
 <span class='kw'>use</span> <span class='ident'>num</span>::<span class='ident'>complex</span>::{<span class='ident'>Complex32</span>, <span class='ident'>Complex64</span>};
 <span class='kw'>use</span> <span class='ident'>vector</span>::<span class='ident'>ops</span>::{<span class='ident'>Copy</span>, <span class='ident'>Axpy</span>, <span class='ident'>Scal</span>, <span class='ident'>Dot</span>, <span class='ident'>Nrm2</span>, <span class='ident'>Asum</span>, <span class='ident'>Iamax</span>};
@@ -181,13 +181,13 @@
 <span class='kw'>pub</span> <span class='kw'>trait</span> <span class='ident'>Vector</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> {
     <span class='doccomment'>/// The stride within the vector. For example, if `inc` returns 7, every</span>
     <span class='doccomment'>/// 7th element is used. Defaults to 1.</span>
-    <span class='kw'>fn</span> <span class='ident'>inc</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>i32</span> { <span class='number'>1</span> }
+    <span class='kw'>fn</span> <span class='ident'>inc</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>c_int</span> { <span class='number'>1</span> }
     <span class='doccomment'>/// The number of elements in the vector.</span>
-    <span class='kw'>fn</span> <span class='ident'>len</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>i32</span>;
+    <span class='kw'>fn</span> <span class='ident'>len</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>c_int</span>;
     <span class='doccomment'>/// An unsafe pointer to a contiguous block of memory.</span>
-    <span class='kw'>unsafe</span> <span class='kw'>fn</span> <span class='ident'>as_ptr</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>T</span>;
+    <span class='kw'>fn</span> <span class='ident'>as_ptr</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>T</span>;
     <span class='doccomment'>/// An unsafe mutable pointer to a contiguous block of memory.</span>
-    <span class='kw'>unsafe</span> <span class='kw'>fn</span> <span class='ident'>as_mut_ptr</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>T</span>;
+    <span class='kw'>fn</span> <span class='ident'>as_mut_ptr</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>T</span>;
 }
 
 <span class='kw'>impl</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span>, <span class='ident'>T</span><span class='op'>&gt;</span> <span class='ident'>Into</span><span class='op'>&lt;</span><span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;&gt;</span> <span class='kw'>for</span> <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> <span class='ident'>Vector</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span>
@@ -243,8 +243,8 @@
 <span class='kw'>impl</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> <span class='ident'>Vector</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> <span class='kw'>for</span> <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> {
 
     <span class='attribute'>#[<span class='ident'>inline</span>]</span>
-    <span class='kw'>fn</span> <span class='ident'>len</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>i32</span> {
-        <span class='kw'>let</span> <span class='ident'>l</span>: <span class='prelude-ty'>Option</span><span class='op'>&lt;</span><span class='ident'>i32</span><span class='op'>&gt;</span> <span class='op'>=</span> <span class='ident'>NumCast</span>::<span class='ident'>from</span>(<span class='ident'>Vec</span>::<span class='ident'>len</span>(<span class='self'>self</span>));
+    <span class='kw'>fn</span> <span class='ident'>len</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>c_int</span> {
+        <span class='kw'>let</span> <span class='ident'>l</span>: <span class='prelude-ty'>Option</span><span class='op'>&lt;</span><span class='ident'>c_int</span><span class='op'>&gt;</span> <span class='op'>=</span> <span class='ident'>NumCast</span>::<span class='ident'>from</span>(<span class='ident'>Vec</span>::<span class='ident'>len</span>(<span class='self'>self</span>));
         <span class='kw'>match</span> <span class='ident'>l</span> {
             <span class='prelude-val'>Some</span>(<span class='ident'>l</span>) <span class='op'>=&gt;</span> <span class='ident'>l</span>,
             <span class='prelude-val'>None</span> <span class='op'>=&gt;</span> <span class='macro'>panic</span><span class='macro'>!</span>(),
@@ -252,17 +252,17 @@
     }
 
     <span class='attribute'>#[<span class='ident'>inline</span>]</span>
-    <span class='kw'>unsafe</span> <span class='kw'>fn</span> <span class='ident'>as_ptr</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>T</span> { <span class='self'>self</span>[..].<span class='ident'>as_ptr</span>() }
+    <span class='kw'>fn</span> <span class='ident'>as_ptr</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>T</span> { <span class='self'>self</span>[..].<span class='ident'>as_ptr</span>() }
 
     <span class='attribute'>#[<span class='ident'>inline</span>]</span>
-    <span class='kw'>unsafe</span> <span class='kw'>fn</span> <span class='ident'>as_mut_ptr</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>T</span> { (<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>[..]).<span class='ident'>as_mut_ptr</span>() }
+    <span class='kw'>fn</span> <span class='ident'>as_mut_ptr</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>T</span> { (<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>[..]).<span class='ident'>as_mut_ptr</span>() }
 }
 
 <span class='kw'>impl</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> <span class='ident'>Vector</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> <span class='kw'>for</span> [<span class='ident'>T</span>] {
 
     <span class='attribute'>#[<span class='ident'>inline</span>]</span>
-    <span class='kw'>fn</span> <span class='ident'>len</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>i32</span> {
-        <span class='kw'>let</span> <span class='ident'>l</span>: <span class='prelude-ty'>Option</span><span class='op'>&lt;</span><span class='ident'>i32</span><span class='op'>&gt;</span> <span class='op'>=</span> <span class='ident'>NumCast</span>::<span class='ident'>from</span>(<span class='op'>&lt;</span>[<span class='ident'>T</span>]<span class='op'>&gt;</span>::<span class='ident'>len</span>(<span class='self'>self</span>));
+    <span class='kw'>fn</span> <span class='ident'>len</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>c_int</span> {
+        <span class='kw'>let</span> <span class='ident'>l</span>: <span class='prelude-ty'>Option</span><span class='op'>&lt;</span><span class='ident'>c_int</span><span class='op'>&gt;</span> <span class='op'>=</span> <span class='ident'>NumCast</span>::<span class='ident'>from</span>(<span class='op'>&lt;</span>[<span class='ident'>T</span>]<span class='op'>&gt;</span>::<span class='ident'>len</span>(<span class='self'>self</span>));
         <span class='kw'>match</span> <span class='ident'>l</span> {
             <span class='prelude-val'>Some</span>(<span class='ident'>l</span>) <span class='op'>=&gt;</span> <span class='ident'>l</span>,
             <span class='prelude-val'>None</span> <span class='op'>=&gt;</span> <span class='macro'>panic</span><span class='macro'>!</span>(),
@@ -270,10 +270,10 @@
     }
 
     <span class='attribute'>#[<span class='ident'>inline</span>]</span>
-    <span class='kw'>unsafe</span> <span class='kw'>fn</span> <span class='ident'>as_ptr</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>T</span> { <span class='op'>&lt;</span>[<span class='ident'>T</span>]<span class='op'>&gt;</span>::<span class='ident'>as_ptr</span>(<span class='self'>self</span>) }
+    <span class='kw'>fn</span> <span class='ident'>as_ptr</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>T</span> { <span class='op'>&lt;</span>[<span class='ident'>T</span>]<span class='op'>&gt;</span>::<span class='ident'>as_ptr</span>(<span class='self'>self</span>) }
 
     <span class='attribute'>#[<span class='ident'>inline</span>]</span>
-    <span class='kw'>unsafe</span> <span class='kw'>fn</span> <span class='ident'>as_mut_ptr</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>T</span> { <span class='op'>&lt;</span>[<span class='ident'>T</span>]<span class='op'>&gt;</span>::<span class='ident'>as_mut_ptr</span>(<span class='self'>self</span>) }
+    <span class='kw'>fn</span> <span class='ident'>as_mut_ptr</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>T</span> { <span class='op'>&lt;</span>[<span class='ident'>T</span>]<span class='op'>&gt;</span>::<span class='ident'>as_mut_ptr</span>(<span class='self'>self</span>) }
 }
 
 <span class='macro'>macro_rules</span><span class='macro'>!</span> <span class='ident'>operations_impl</span>(
@@ -293,10 +293,12 @@
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -313,7 +315,7 @@
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -323,8 +325,8 @@
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>typedef</code> (or
-                    <code>tdef</code>).
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
                 </p>
 
                 <p>
@@ -333,7 +335,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -345,6 +347,6 @@
     <script src="../../../jquery.js"></script>
     <script src="../../../main.js"></script>
     
-    <script async src="../../../search-index.js"></script>
+    <script defer src="../../../search-index.js"></script>
 </body>
 </html>

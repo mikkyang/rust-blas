@@ -24,10 +24,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../../../index.html'>rblas</a>::<wbr><a href='../../index.html'>matrix_vector</a>::<wbr><a href='../index.html'>ll</a></p><script>window.sidebarCurrent = {name: 'cblas_c', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -45,7 +45,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-5422' class='srclink' href='../../../../src/rblas/matrix_vector/ll.rs.html#99-147' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-1290' class='srclink' href='../../../../src/rblas/matrix_vector/ll.rs.html#99-147' title='goto source code'>[src]</a></span></h1>
 <h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
 <table><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_cgemv.html' title='rblas::matrix_vector::ll::cblas_c::cblas_cgemv'>cblas_cgemv</a> as gemv;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_csymv.html' title='rblas::matrix_vector::ll::cblas_c::cblas_csymv'>cblas_csymv</a> as symv;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_chemv.html' title='rblas::matrix_vector::ll::cblas_c::cblas_chemv'>cblas_chemv</a> as hemv;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_ctrmv.html' title='rblas::matrix_vector::ll::cblas_c::cblas_ctrmv'>cblas_ctrmv</a> as trmv;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_ctrsv.html' title='rblas::matrix_vector::ll::cblas_c::cblas_ctrsv'>cblas_ctrsv</a> as trsv;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_cgeru.html' title='rblas::matrix_vector::ll::cblas_c::cblas_cgeru'>cblas_cgeru</a> as geru;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_cgerc.html' title='rblas::matrix_vector::ll::cblas_c::cblas_cgerc'>cblas_cgerc</a> as gerc;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_cher.html' title='rblas::matrix_vector::ll::cblas_c::cblas_cher'>cblas_cher</a> as her;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_cher2.html' title='rblas::matrix_vector::ll::cblas_c::cblas_cher2'>cblas_cher2</a> as her2;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_cgbmv.html' title='rblas::matrix_vector::ll::cblas_c::cblas_cgbmv'>cblas_cgbmv</a> as gbmv;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_chbmv.html' title='rblas::matrix_vector::ll::cblas_c::cblas_chbmv'>cblas_chbmv</a> as hbmv;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_ctbmv.html' title='rblas::matrix_vector::ll::cblas_c::cblas_ctbmv'>cblas_ctbmv</a> as tbmv;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_ctbsv.html' title='rblas::matrix_vector::ll::cblas_c::cblas_ctbsv'>cblas_ctbsv</a> as tbsv;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_chpmv.html' title='rblas::matrix_vector::ll::cblas_c::cblas_chpmv'>cblas_chpmv</a> as hpmv;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_ctpmv.html' title='rblas::matrix_vector::ll::cblas_c::cblas_ctpmv'>cblas_ctpmv</a> as tpmv;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_ctpsv.html' title='rblas::matrix_vector::ll::cblas_c::cblas_ctpsv'>cblas_ctpsv</a> as tpsv;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_chpr.html' title='rblas::matrix_vector::ll::cblas_c::cblas_chpr'>cblas_chpr</a> as hpr;</code></td></tr><tr><td><code>pub use self::<a class='fn' href='../../../../rblas/matrix_vector/ll/cblas_c/fn.cblas_chpr2.html' title='rblas::matrix_vector::ll::cblas_c::cblas_chpr2'>cblas_chpr2</a> as hpr2;</code></td></tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
 <table>
@@ -197,10 +197,12 @@
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -217,7 +219,7 @@
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -227,8 +229,8 @@
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>typedef</code> (or
-                    <code>tdef</code>).
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
                 </p>
 
                 <p>
@@ -237,7 +239,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -249,6 +251,6 @@
     <script src="../../../../jquery.js"></script>
     <script src="../../../../main.js"></script>
     
-    <script async src="../../../../search-index.js"></script>
+    <script defer src="../../../../search-index.js"></script>
 </body>
 </html>
