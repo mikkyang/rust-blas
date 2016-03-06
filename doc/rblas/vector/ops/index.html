@@ -9,6 +9,7 @@
 
     <title>rblas::vector::ops - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../../main.css">
 
     
@@ -45,7 +46,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-487' class='srclink' href='../../../src/rblas/vector/ops.rs.html#5-594' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-487' class='srclink' href='../../../src/rblas/src/vector/ops.rs.html#5-600' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>Wrappers for vector functions.</p>
 </div><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
 <table>
@@ -54,7 +55,6 @@
                                title='rblas::vector::ops::Asum'>Asum</a></td>
                         <td class='docblock short'>
                              <p>Computes the sum of the absolute values of elements in a vector.</p>
-
                         </td>
                     </tr>
                 
@@ -63,7 +63,6 @@
                                title='rblas::vector::ops::Axpy'>Axpy</a></td>
                         <td class='docblock short'>
                              <p>Computes <code>a * x + y</code> and stores the result in <code>y</code>.</p>
-
                         </td>
                     </tr>
                 
@@ -80,7 +79,6 @@
                                title='rblas::vector::ops::Dot'>Dot</a></td>
                         <td class='docblock short'>
                              <p>Computes <code>x^T * y</code>.</p>
-
                         </td>
                     </tr>
                 
@@ -89,7 +87,6 @@
                                title='rblas::vector::ops::Dotc'>Dotc</a></td>
                         <td class='docblock short'>
                              <p>Computes <code>x^H * y</code>.</p>
-
                         </td>
                     </tr>
                 
@@ -97,8 +94,7 @@
                         <td><a class='trait' href='trait.Iamax.html'
                                title='rblas::vector::ops::Iamax'>Iamax</a></td>
                         <td class='docblock short'>
-                             <p>Finds the index of the maximum element in a vector.</p>
-
+                             <p>Finds the index of the element with maximum absolute value in a vector.</p>
                         </td>
                     </tr>
                 
@@ -107,7 +103,6 @@
                                title='rblas::vector::ops::Nrm2'>Nrm2</a></td>
                         <td class='docblock short'>
                              <p>Computes the L2 norm (Euclidian length) of a vector.</p>
-
                         </td>
                     </tr>
                 
@@ -118,7 +113,6 @@
                              <p>Applies a Givens rotation matrix to a pair of vectors, where <code>cos</code> is
 the value of the cosine of the angle in the Givens matrix, and <code>sin</code> is
 the sine.</p>
-
                         </td>
                     </tr>
                 
@@ -127,7 +121,6 @@ the sine.</p>
                                title='rblas::vector::ops::Scal'>Scal</a></td>
                         <td class='docblock short'>
                              <p>Computes <code>a * x</code> and stores the result in <code>x</code>.</p>
-
                         </td>
                     </tr>
                 
@@ -136,7 +129,6 @@ the sine.</p>
                                title='rblas::vector::ops::Swap'>Swap</a></td>
                         <td class='docblock short'>
                              <p>Swaps the content of <code>x</code> and <code>y</code>.</p>
-
                         </td>
                     </tr>
                 </table></section>
@@ -182,7 +174,7 @@ the sine.</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

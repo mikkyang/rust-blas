@@ -9,6 +9,7 @@
 
     <title>rblas::matrix_vector::ops::Tbsv - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../../main.css">
 
     
@@ -45,10 +46,13 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-2143' class='srclink' href='../../../src/rblas/matrix_vector/ops.rs.html#347-349' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-2143' class='srclink' href='../../../src/rblas/src/matrix_vector/ops.rs.html#389-391' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait Tbsv: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> {
     fn <a href='#tymethod.tbsv' class='fnname'>tbsv</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, trans: <a class='enum' href='../../../rblas/attribute/enum.Transpose.html' title='rblas::attribute::Transpose'>Transpose</a>, diagonal: <a class='enum' href='../../../rblas/attribute/enum.Diagonal.html' title='rblas::attribute::Diagonal'>Diagonal</a>, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.BandMatrix.html' title='rblas::matrix::BandMatrix'>BandMatrix</a>&lt;Self&gt;, x: &amp;mut V);
-}</pre>
+}</pre><div class='docblock'><p>Solve triangular band matrix system</p>
+
+<p>A ← A<sup>-1 OP</sup>x</p>
+</div>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
         <h3 id='tymethod.tbsv' class='method stab '><code>fn <a href='#tymethod.tbsv' class='fnname'>tbsv</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, trans: <a class='enum' href='../../../rblas/attribute/enum.Transpose.html' title='rblas::attribute::Transpose'>Transpose</a>, diagonal: <a class='enum' href='../../../rblas/attribute/enum.Diagonal.html' title='rblas::attribute::Diagonal'>Diagonal</a>, a: &amp;<a class='trait' href='../../../rblas/matrix/trait.BandMatrix.html' title='rblas::matrix::BandMatrix'>BandMatrix</a>&lt;Self&gt;, x: &amp;mut V)</code></h3></div>
@@ -103,7 +107,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

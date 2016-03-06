@@ -9,6 +9,7 @@
 
     <title>rblas::vector::ops::Iamax - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../../main.css">
 
     
@@ -45,10 +46,14 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-795' class='srclink' href='../../../src/rblas/vector/ops.rs.html#496-498' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-795' class='srclink' href='../../../src/rblas/src/vector/ops.rs.html#502-504' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait Iamax: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> {
     fn <a href='#tymethod.iamax' class='fnname'>iamax</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(x: &amp;V) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>;
-}</pre><div class='docblock'><p>Finds the index of the maximum element in a vector.</p>
+}</pre><div class='docblock'><p>Finds the index of the element with maximum absolute value in a vector.</p>
+
+<p>Complex vectors maximize the value <code>|Re(x_k)| + |Im(x_k)|</code>.</p>
+
+<p>The first index with a maximum is returned.</p>
 </div>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
@@ -104,7 +109,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

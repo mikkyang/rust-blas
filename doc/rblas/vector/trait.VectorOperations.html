@@ -9,6 +9,7 @@
 
     <title>rblas::vector::VectorOperations - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
 
     
@@ -45,7 +46,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-856' class='srclink' href='../../src/rblas/vector/mod.rs.html#41-75' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-856' class='srclink' href='../../src/rblas/src/vector/mod.rs.html#41-75' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait VectorOperations&lt;T&gt;: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;T&gt; <span class='where'>where T: <a class='trait' href='../../rblas/vector/ops/trait.Copy.html' title='rblas::vector::ops::Copy'>Copy</a> + <a class='trait' href='../../rblas/vector/ops/trait.Axpy.html' title='rblas::vector::ops::Axpy'>Axpy</a> + <a class='trait' href='../../rblas/vector/ops/trait.Scal.html' title='rblas::vector::ops::Scal'>Scal</a> + <a class='trait' href='../../rblas/vector/ops/trait.Dot.html' title='rblas::vector::ops::Dot'>Dot</a> + <a class='trait' href='../../rblas/vector/ops/trait.Nrm2.html' title='rblas::vector::ops::Nrm2'>Nrm2</a> + <a class='trait' href='../../rblas/vector/ops/trait.Asum.html' title='rblas::vector::ops::Asum'>Asum</a> + <a class='trait' href='../../rblas/vector/ops/trait.Iamax.html' title='rblas::vector::ops::Iamax'>Iamax</a></span> {
     fn <a href='#method.update' class='fnname'>update</a>(&amp;mut self, alpha: &amp;T, x: &amp;<a class='trait' href='../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;T&gt;) -&gt; &amp;mut Self { ... }
     fn <a href='#method.scale' class='fnname'>scale</a>(&amp;mut self, alpha: &amp;T) -&gt; &amp;mut Self { ... }
@@ -108,7 +109,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

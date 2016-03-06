@@ -9,6 +9,7 @@
 
     <title>rblas::matrix_vector::ops::Hpr2 - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../../main.css">
 
     
@@ -45,10 +46,13 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-2406' class='srclink' href='../../../src/rblas/matrix_vector/ops.rs.html#474-476' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-2406' class='srclink' href='../../../src/rblas/src/matrix_vector/ops.rs.html#540-542' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait Hpr2: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> {
     fn <a href='#tymethod.hpr2' class='fnname'>hpr2</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, W: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, alpha: &amp;Self, x: &amp;V, y: &amp;W, a: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;);
-}</pre>
+}</pre><div class='docblock'><p>Hermitian packed matrix rank-2 update</p>
+
+<p>A ← A + αxy<sup>H</sup> + y(αx)<sup>H</sup></p>
+</div>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
         <h3 id='tymethod.hpr2' class='method stab '><code>fn <a href='#tymethod.hpr2' class='fnname'>hpr2</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;, W: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;Self&gt;&gt;(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, alpha: &amp;Self, x: &amp;V, y: &amp;W, a: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;Self&gt;)</code></h3></div>
@@ -101,7 +105,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

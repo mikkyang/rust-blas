@@ -9,6 +9,7 @@
 
     <title>rblas::matrix::ll::cblas_c::cblas_cgemm - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../../../main.css">
 
     
@@ -45,8 +46,8 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-2655' class='srclink' href='../../../../src/rblas/matrix/ll.rs.html#82' title='goto source code'>[src]</a></span></h1>
-<pre class='rust fn'>pub unsafe extern fn cblas_cgemm(order: <a class='enum' href='../../../../rblas/attribute/enum.Order.html' title='rblas::attribute::Order'>Order</a>, trans_a: <a class='enum' href='../../../../rblas/attribute/enum.Transpose.html' title='rblas::attribute::Transpose'>Transpose</a>, trans_b: <a class='enum' href='../../../../rblas/attribute/enum.Transpose.html' title='rblas::attribute::Transpose'>Transpose</a>, m: <a class='type' href='../../../../libc/type.c_int.html' title='libc::c_int'>c_int</a>, n: <a class='type' href='../../../../libc/type.c_int.html' title='libc::c_int'>c_int</a>, k: <a class='type' href='../../../../libc/type.c_int.html' title='libc::c_int'>c_int</a>, alpha: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const <a class='enum' href='../../../../libc/enum.c_void.html' title='libc::c_void'>c_void</a></a>, a: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const <a class='enum' href='../../../../libc/enum.c_void.html' title='libc::c_void'>c_void</a></a>, lda: <a class='type' href='../../../../libc/type.c_int.html' title='libc::c_int'>c_int</a>, b: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const <a class='enum' href='../../../../libc/enum.c_void.html' title='libc::c_void'>c_void</a></a>, ldb: <a class='type' href='../../../../libc/type.c_int.html' title='libc::c_int'>c_int</a>, beta: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const <a class='enum' href='../../../../libc/enum.c_void.html' title='libc::c_void'>c_void</a></a>, c: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut <a class='enum' href='../../../../libc/enum.c_void.html' title='libc::c_void'>c_void</a></a>, ldc: <a class='type' href='../../../../libc/type.c_int.html' title='libc::c_int'>c_int</a>)</pre></section>
+        </span><a id='src-2655' class='srclink' href='../../../../src/rblas/src/matrix/ll.rs.html#82' title='goto source code'>[src]</a></span></h1>
+<pre class='rust fn'>pub unsafe extern fn cblas_cgemm(order: <a class='enum' href='../../../../rblas/attribute/enum.Order.html' title='rblas::attribute::Order'>Order</a>, trans_a: <a class='enum' href='../../../../rblas/attribute/enum.Transpose.html' title='rblas::attribute::Transpose'>Transpose</a>, trans_b: <a class='enum' href='../../../../rblas/attribute/enum.Transpose.html' title='rblas::attribute::Transpose'>Transpose</a>, m: <a class='type' href='../../../../libc/type.c_int.html' title='libc::c_int'>c_int</a>, n: <a class='type' href='../../../../libc/type.c_int.html' title='libc::c_int'>c_int</a>, k: <a class='type' href='../../../../libc/type.c_int.html' title='libc::c_int'>c_int</a>, alpha: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='enum' href='../../../../libc/enum.c_void.html' title='libc::c_void'>c_void</a>, a: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='enum' href='../../../../libc/enum.c_void.html' title='libc::c_void'>c_void</a>, lda: <a class='type' href='../../../../libc/type.c_int.html' title='libc::c_int'>c_int</a>, b: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='enum' href='../../../../libc/enum.c_void.html' title='libc::c_void'>c_void</a>, ldb: <a class='type' href='../../../../libc/type.c_int.html' title='libc::c_int'>c_int</a>, beta: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='enum' href='../../../../libc/enum.c_void.html' title='libc::c_void'>c_void</a>, c: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../../../../libc/enum.c_void.html' title='libc::c_void'>c_void</a>, ldc: <a class='type' href='../../../../libc/type.c_int.html' title='libc::c_int'>c_int</a>)</pre></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -89,7 +90,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

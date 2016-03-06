@@ -9,6 +9,7 @@
 
     <title>rblas::matrix_vector::ops::Hpr - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../../main.css">
 
     
@@ -45,10 +46,13 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-2355' class='srclink' href='../../../src/rblas/matrix_vector/ops.rs.html#426-428' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-2355' class='srclink' href='../../../src/rblas/src/matrix_vector/ops.rs.html#483-485' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait Hpr: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> {
     fn <a href='#tymethod.hpr' class='fnname'>hpr</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;<a class='struct' href='../../../num/complex/struct.Complex.html' title='num::complex::Complex'>Complex</a>&lt;Self&gt;&gt;&gt;(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, alpha: &amp;Self, x: &amp;V, a: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;<a class='struct' href='../../../num/complex/struct.Complex.html' title='num::complex::Complex'>Complex</a>&lt;Self&gt;&gt;);
-}</pre>
+}</pre><div class='docblock'><p>Hermitian packed matrix rank-1 update</p>
+
+<p>A ← A + αxx<sup>H</sup></p>
+</div>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
         <h3 id='tymethod.hpr' class='method stab '><code>fn <a href='#tymethod.hpr' class='fnname'>hpr</a>&lt;V: ?<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='../../../rblas/vector/trait.Vector.html' title='rblas::vector::Vector'>Vector</a>&lt;<a class='struct' href='../../../num/complex/struct.Complex.html' title='num::complex::Complex'>Complex</a>&lt;Self&gt;&gt;&gt;(symmetry: <a class='enum' href='../../../rblas/attribute/enum.Symmetry.html' title='rblas::attribute::Symmetry'>Symmetry</a>, alpha: &amp;Self, x: &amp;V, a: &amp;mut <a class='trait' href='../../../rblas/matrix/trait.Matrix.html' title='rblas::matrix::Matrix'>Matrix</a>&lt;<a class='struct' href='../../../num/complex/struct.Complex.html' title='num::complex::Complex'>Complex</a>&lt;Self&gt;&gt;)</code></h3></div>
@@ -101,7 +105,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
