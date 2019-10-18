@@ -9,7 +9,6 @@ use std::ops::Index;
 use std::slice;
 use num::traits::NumCast;
 use Matrix;
-use Vector;
 use vector::ops::Copy;
 
 #[derive(Debug, PartialEq)]
@@ -105,10 +104,10 @@ impl<T> Matrix<T> for Mat<T> {
     }
 }
 
-impl<'a, T> From<&'a Matrix<T>> for Mat<T>
+impl<'a, T> From<&'a dyn Matrix<T>> for Mat<T>
     where T: Copy
 {
-    fn from(a: &Matrix<T>) -> Mat<T> {
+    fn from(a: &dyn Matrix<T>) -> Mat<T> {
         let n = a.rows() as usize;
         let m = a.cols() as usize;
         let len = n * m;
