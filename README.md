@@ -1,5 +1,9 @@
 # rust-blas
 
+**_MIGRATED: NOW PART OF THE [JUICE REPOSITORY](https://github.com/spearow/juice)_**
+
+---
+
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![crates.io](http://meritbadge.herokuapp.com/rust-blas)](https://crates.io/crates/rust-blas)
 
