@@ -3,10 +3,8 @@
 // license that can be found in the LICENSE file.
 
 //! Matrix operations.
+use crate::attribute::Order;
 use libc::c_int;
-use attribute::{
-    Order,
-};
 
 pub mod ll;
 pub mod ops;
@@ -22,7 +20,9 @@ pub trait Matrix<T> {
         }
     }
     /// The order of the matrix. Defaults to `RowMajor`.
-    fn order(&self) -> Order { Order::RowMajor }
+    fn order(&self) -> Order {
+        Order::RowMajor
+    }
     /// Returns the number of rows.
     fn rows(&self) -> c_int;
     /// Returns the number of columns.
@@ -36,12 +36,14 @@ pub trait Matrix<T> {
 pub trait BandMatrix<T>: Matrix<T> {
     fn sub_diagonals(&self) -> c_int;
     fn sup_diagonals(&self) -> c_int;
+
+    fn as_matrix(&self) -> &dyn Matrix<T>;
 }
 
 #[cfg(test)]
 pub mod tests {
+    use crate::Matrix;
     use libc::c_int;
-    use matrix::Matrix;
 
     pub struct M<T>(pub c_int, pub c_int, pub Vec<T>);
 

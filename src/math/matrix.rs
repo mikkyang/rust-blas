@@ -2,25 +2,23 @@
 // Use of this source code is governed by a MIT-style
 // license that can be found in the LICENSE file.
 
-use std::ops::{
-    Add,
-    Mul,
-};
-use num::complex::{Complex32, Complex64};
-use attribute::Transpose;
-use default::Default;
-use math::Trans;
-use matrix::ops::*;
-use matrix::Matrix;
-use math::Mat;
-use vector::ops::*;
+use crate::attribute::Transpose;
+use crate::default::Default;
+use crate::math::Mat;
+use crate::math::Trans;
+use crate::matrix::ops::*;
+use crate::matrix::Matrix;
+use crate::vector::ops::*;
+use num_complex::{Complex32, Complex64};
+use std::ops::{Add, Mul};
 
-impl<'a, T> Add for &'a Matrix<T>
-    where T: Axpy + Copy + Default
+impl<'a, T> Add for &'a dyn Matrix<T>
+where
+    T: Axpy + Copy + Default,
 {
     type Output = Mat<T>;
 
-    fn add(self, b: &Matrix<T>) -> Mat<T> {
+    fn add(self, b: &dyn Matrix<T>) -> Mat<T> {
         if self.cols() != b.cols() || self.rows() != b.rows() {
             panic!("Dimension mismatch")
         }
@@ -32,8 +30,9 @@ impl<'a, T> Add for &'a Matrix<T>
     }
 }
 
-impl<'a, T> Mul<T> for &'a Matrix<T>
-    where T: Sized + Copy + Scal
+impl<'a, T> Mul<T> for &'a dyn Matrix<T>
+where
+    T: Sized + Copy + Scal,
 {
     type Output = Mat<T>;
 
@@ -46,11 +45,11 @@ impl<'a, T> Mul<T> for &'a Matrix<T>
 
 macro_rules! left_scale(($($t: ident), +) => (
     $(
-        impl<'a> Mul<&'a Matrix<$t>> for $t
+        impl<'a> Mul<&'a dyn Matrix<$t>> for $t
         {
             type Output = Mat<$t>;
 
-            fn mul(self, x: &Matrix<$t>) -> Mat<$t> {
+            fn mul(self, x: &dyn Matrix<$t>) -> Mat<$t> {
                 let mut result = Mat::from(x);
                 Scal::scal_mat(&self, &mut result);
                 result
@@ -61,12 +60,13 @@ macro_rules! left_scale(($($t: ident), +) => (
 
 left_scale!(f32, f64, Complex32, Complex64);
 
-impl<'a, T> Mul<&'a Matrix<T>> for &'a Matrix<T>
-    where T: Default + Gemm,
+impl<'a, T> Mul<&'a dyn Matrix<T>> for &'a dyn Matrix<T>
+where
+    T: Default + Gemm,
 {
     type Output = Mat<T>;
 
-    fn mul(self, b: &Matrix<T>) -> Mat<T> {
+    fn mul(self, b: &dyn Matrix<T>) -> Mat<T> {
         if self.cols() != b.rows() {
             panic!("Dimension mismatch");
         }
@@ -76,17 +76,26 @@ impl<'a, T> Mul<&'a Matrix<T>> for &'a Matrix<T>
         let mut result = Mat::new(n, m);
         let t = Transpose::NoTrans;
 
-        Gemm::gemm(&Default::one(), t, self, t, b, &Default::zero(), &mut result);
+        Gemm::gemm(
+            &Default::one(),
+            t,
+            self,
+            t,
+            b,
+            &Default::zero(),
+            &mut result,
+        );
         result
     }
 }
 
-impl<'a, T> Mul<&'a Matrix<T>> for Trans<&'a Matrix<T>>
-    where T: Default + Gemm,
+impl<'a, T> Mul<&'a dyn Matrix<T>> for Trans<&'a dyn Matrix<T>>
+where
+    T: Default + Gemm,
 {
     type Output = Mat<T>;
 
-    fn mul(self, b: &Matrix<T>) -> Mat<T> {
+    fn mul(self, b: &dyn Matrix<T>) -> Mat<T> {
         let (a, at) = match self {
             Trans::T(a) => (a, Transpose::Trans),
             Trans::H(a) => (a, Transpose::ConjTrans),
@@ -106,12 +115,13 @@ impl<'a, T> Mul<&'a Matrix<T>> for Trans<&'a Matrix<T>>
     }
 }
 
-impl<'a, T> Mul<Trans<&'a Matrix<T>>> for &'a Matrix<T>
-    where T: Default + Gemm,
+impl<'a, T> Mul<Trans<&'a dyn Matrix<T>>> for &'a dyn Matrix<T>
+where
+    T: Default + Gemm,
 {
     type Output = Mat<T>;
 
-    fn mul(self, rhs: Trans<&Matrix<T>>) -> Mat<T> {
+    fn mul(self, rhs: Trans<&dyn Matrix<T>>) -> Mat<T> {
         let (b, bt) = match rhs {
             Trans::T(a) => (a, Transpose::Trans),
             Trans::H(a) => (a, Transpose::ConjTrans),
@@ -126,17 +136,26 @@ impl<'a, T> Mul<Trans<&'a Matrix<T>>> for &'a Matrix<T>
         let mut result = Mat::new(n, m);
         let at = Transpose::NoTrans;
 
-        Gemm::gemm(&Default::one(), at, self, bt, b, &Default::zero(), &mut result);
+        Gemm::gemm(
+            &Default::one(),
+            at,
+            self,
+            bt,
+            b,
+            &Default::zero(),
+            &mut result,
+        );
         result
     }
 }
 
-impl<'a, T> Mul<Trans<&'a Matrix<T>>> for Trans<&'a Matrix<T>>
-    where T: Default + Gemm,
+impl<'a, T> Mul<Trans<&'a dyn Matrix<T>>> for Trans<&'a dyn Matrix<T>>
+where
+    T: Default + Gemm,
 {
     type Output = Mat<T>;
 
-    fn mul(self, rhs: Trans<&Matrix<T>>) -> Mat<T> {
+    fn mul(self, rhs: Trans<&dyn Matrix<T>>) -> Mat<T> {
         let (a, at) = match self {
             Trans::T(a) => (a, Transpose::Trans),
             Trans::H(a) => (a, Transpose::ConjTrans),
@@ -162,9 +181,9 @@ impl<'a, T> Mul<Trans<&'a Matrix<T>>> for Trans<&'a Matrix<T>>
 
 #[cfg(test)]
 mod tests {
-    use Matrix;
-    use math::Mat;
-    use math::Marker::T;
+    use crate::math::Marker::T;
+    use crate::math::Mat;
+    use crate::Matrix;
 
     #[test]
     fn add() {
@@ -172,8 +191,8 @@ mod tests {
         let b = mat![-1.0, 3.0; 1.0, 1.0];
 
         let c = {
-            let ar = &a as &Matrix<_>;
-            let br = &b as &Matrix<_>;
+            let ar = &a as &dyn Matrix<_>;
+            let br = &b as &dyn Matrix<_>;
             ar + br
         };
 
@@ -183,7 +202,7 @@ mod tests {
     #[test]
     fn scale() {
         let x = mat![1f32, 2f32; 3f32, 4f32];
-        let xr = &x as &Matrix<_>;
+        let xr = &x as &dyn Matrix<_>;
 
         let y = xr * 3.0;
         let z = 3.0 * xr;
@@ -197,8 +216,8 @@ mod tests {
         let b = mat![-1.0, 3.0; 1.0, 1.0];
 
         let c = {
-            let ar = &a as &Matrix<_>;
-            let br = &b as &Matrix<_>;
+            let ar = &a as &dyn Matrix<_>;
+            let br = &b as &dyn Matrix<_>;
             ar * br
         };
 
@@ -211,8 +230,8 @@ mod tests {
         let b = mat![-1.0, 3.0; 1.0, 1.0];
 
         let c = {
-            let ar = &a as &Matrix<_>;
-            let br = &b as &Matrix<_>;
+            let ar = &a as &dyn Matrix<_>;
+            let br = &b as &dyn Matrix<_>;
             (ar ^ T) * br
         };
 
@@ -225,8 +244,8 @@ mod tests {
         let b = mat![-1.0, 1.0; 3.0, 1.0];
 
         let c = {
-            let ar = &a as &Matrix<_>;
-            let br = &b as &Matrix<_>;
+            let ar = &a as &dyn Matrix<_>;
+            let br = &b as &dyn Matrix<_>;
             ar * (br ^ T)
         };
 
@@ -239,8 +258,8 @@ mod tests {
         let b = mat![-1.0, 1.0; 3.0, 1.0];
 
         let c = {
-            let ar = &a as &Matrix<_>;
-            let br = &b as &Matrix<_>;
+            let ar = &a as &dyn Matrix<_>;
+            let br = &b as &dyn Matrix<_>;
             (ar ^ T) * (br ^ T)
         };
 

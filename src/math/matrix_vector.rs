@@ -2,26 +2,27 @@
 // Use of this source code is governed by a MIT-style
 // license that can be found in the LICENSE file.
 
-use std::ops::{
-    Mul,
-};
-use attribute::Transpose;
-use default::Default;
-use vector::Vector;
-use matrix_vector::ops::*;
-use matrix::Matrix;
-use math::Trans;
-use math::Mat;
+use crate::attribute::Transpose;
+use crate::default::Default;
+use crate::math::Mat;
+use crate::math::Trans;
+use crate::matrix::Matrix;
+use crate::matrix_vector::ops::*;
+use crate::vector::Vector;
+use std::ops::Mul;
 
-impl<'a, T> Mul<&'a Vector<T>> for &'a Matrix<T>
-    where T: Default + Copy + Gemv
+impl<'a, T> Mul<&'a dyn Vector<T>> for &'a dyn Matrix<T>
+where
+    T: Default + Copy + Gemv,
 {
     type Output = Vec<T>;
 
-    fn mul(self, x: &Vector<T>) -> Vec<T> {
+    fn mul(self, x: &dyn Vector<T>) -> Vec<T> {
         let n = self.rows() as usize;
         let mut result = Vec::with_capacity(n);
-        unsafe { result.set_len(n); }
+        unsafe {
+            result.set_len(n);
+        }
         let scale = Default::one();
         let clear = Default::zero();
         let t = Transpose::NoTrans;
@@ -31,12 +32,13 @@ impl<'a, T> Mul<&'a Vector<T>> for &'a Matrix<T>
     }
 }
 
-impl<'a, T> Mul<Trans<&'a Vector<T>>> for &'a Vector<T>
-    where T: Default + Ger + Gerc + Clone,
+impl<'a, T> Mul<Trans<&'a dyn Vector<T>>> for &'a dyn Vector<T>
+where
+    T: Default + Ger + Gerc + Clone,
 {
     type Output = Mat<T>;
 
-    fn mul(self, x: Trans<&Vector<T>>) -> Mat<T> {
+    fn mul(self, x: Trans<&dyn Vector<T>>) -> Mat<T> {
         let n = self.len() as usize;
         let m = (*x).len() as usize;
         let mut result = Mat::fill(Default::zero(), n, m);
@@ -53,10 +55,10 @@ impl<'a, T> Mul<Trans<&'a Vector<T>>> for &'a Vector<T>
 
 #[cfg(test)]
 mod tests {
-    use Vector;
-    use Matrix;
-    use math::Mat;
-    use math::Marker::T;
+    use crate::math::Marker::T;
+    use crate::math::Mat;
+    use crate::Matrix;
+    use crate::Vector;
 
     #[test]
     fn mul() {
@@ -64,8 +66,8 @@ mod tests {
         let x = vec![2f32, 1.0];
 
         let y = {
-            let ar = &a as &Matrix<f32>;
-            let xr = &x as &Vector<f32>;
+            let ar = &a as &dyn Matrix<f32>;
+            let xr = &x as &dyn Vector<f32>;
             ar * xr
         };
 
@@ -78,8 +80,8 @@ mod tests {
         let y = vec![3.0, 6.0, -1.0];
 
         let a = {
-            let xr = &x as &Vector<_>;
-            let yr = &y as &Vector<_>;
+            let xr = &x as &dyn Vector<_>;
+            let yr = &y as &dyn Vector<_>;
 
             xr * (yr ^ T)
         };
